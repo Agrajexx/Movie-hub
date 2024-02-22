@@ -20,18 +20,29 @@
 
         header {
             background-color: #FF6F61; /* Coral header background */
-            color: #fff;
+            color:#194d19 ;
             text-align: center;
             padding: 1em;
-             
-            margin: 5px;
-            display: inline-block;
-            height: 300px;
-            width: 400px;
-            background: repeating-linear-gradient(-45deg, #FF6F61 0px, #FF6F61 5px, #333 6px, #333 11px, #FF6F61 12px);
-        
-            background: repeating-linear-gradient(-45deg, #111 2px, #222 3px, #222 4px, #111 7px);
-
+            @keyframes move-it {
+         0% {
+         background-position: initial;
+         }
+         100% {
+         background-position: 100px 0px;
+         }
+         }
+         
+         header{  
+         background: repeating-linear-gradient(
+         45deg,
+         #39ac39,
+         #39ac39 5%,
+         #FF6F61 5%,
+         #FF6F61 10%
+         );
+         background-size: 100px 100px;
+         animation: move-it 2s linear infinite;
+         }
         }
 
         main {
@@ -123,7 +134,7 @@
 <body>
 
     <header>
-        <h1>Movie Review Hub</h1>
+        <h1>Movie Hub</h1>
     </header>
 
     <main>
