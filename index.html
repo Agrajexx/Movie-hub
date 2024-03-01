@@ -118,12 +118,60 @@
     <header>
         <img src="movie hub1.png" width="150px" height="70px">
         
-   
+
+       
     </header>
 
     <main>
         <!-- Movie Review Section -->
         <section id="movieReviews">
+            
+                      <article>
+                          <h2>Blue Star</h2>
+                           <img src="blue star.jpg" alt="Movie 1 Image">
+                          <h1>Title: Blue Star</h1>
+<p><em>Also known as Blue Star</em></p>
+<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.6</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+<p>(7.6 based on 467 user ratings)</p>
+<p><strong>Duration:</strong> 2h 46min</p>
+<p><strong>Release Date:</strong> 25 / 1 / 2024 (India) <span class="flag-icon flag-icon-in"></span> <span itemprop="countryOfOrigin">India</span></p>
+<p><strong>Language:</strong> <span class="hashtag">#Tamil</span></p>
+<p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Comedy">🤣</span> Comedy, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Sport">⛹️‍♂️</span> Sport</p>
+<p><strong>Story Line:</strong> The cricket captains of Arakkonam, Ranjith and Rajesh, ignite a rivalry that ruins their chances of playing when politics interferes.</p>
+<p><strong>Directors:</strong> S. Jayakumar</p>
+<p><strong>Writers:</strong> S. Jayakumar, Tamizh Prabha</p>
+<p><strong>Stars:</strong> Ashok Selvan, Keerthi Pandian, Dhivya Dhuraisamy, Shanthnu Bhagyaraj, Bagavathi Perumal, Mullai Arasi Lizzie Antony</p>
+
+<script>
+    var rating = parseFloat(document.getElementById("ratingValue").innerText);
+    var starIcon = document.getElementById("starIcon");
+    
+    // Function to generate star icons based on rating
+    function generateStarIcons(rating) {
+        var fullStars = Math.floor(rating);
+        var remainder = rating - fullStars;
+        var starIcons = "";
+        
+        // Adding full star icons
+        for (var i = 0; i < fullStars; i++) {
+            starIcons += "⭐️";
+        }
+        
+        // Adding half star icon if needed
+        if (remainder >= 0.5) {
+            starIcons += "⭐️";
+        }
+        
+        starIcon.innerText = starIcons;
+    }
+    
+    // Generate star icons based on rating
+    generateStarIcons(rating);
+</script>
+                          <br> <p class="color-change">"Tap Download for telegram files";</p>
+           <a href="https://telegram.me/BlueStarjexx" class="button-81" role="button">DOWNLOAD</a>
+           
+                      </article>
 
                        <article>
                            <h2>Malaikottai Vaaliban</h2>
