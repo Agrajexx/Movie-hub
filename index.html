@@ -23,47 +23,48 @@
             color:#fff;
             text-align: center;
             padding: 1em;
-      
+           
+              
         }
         .slider-container {
-    width: 80%;
-    margin: 0 auto;
-    position: relative; /* Added position relative */
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  .slider {
-    width: 100%;
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  .slide {
-    flex: 0 0 100%;
-    position: relative; /* Added position relative */
-  }
-  .slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  .slide img:hover {
-    transform: scale(1.05);
-  }
-  .strike-word {
-    position: absolute;
-    top: 10px; /* Adjust the positioning as needed */
-    left: 10px; /* Adjust the positioning as needed */
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: line-through;
-  }
+        width: 80%;
+        margin: 0 auto;
+        position: relative; /* Added position relative */
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .slider {
+        width: 100%;
+        display: flex;
+        transition: transform 0.5s ease;
+        }
+        .slide {
+        flex: 0 0 100%;
+        position: relative; /* Added position relative */
+        }
+        .slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        }
+        .slide img:hover {
+        transform: scale(1.05);
+        }
+        .strike-word {
+        position: absolute;
+        top: 10px; /* Adjust the positioning as needed */
+        left: 10px; /* Adjust the positioning as needed */
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: line-through;
+        }
 
         main {
             padding: 20px;
@@ -155,41 +156,43 @@
 
     <header>
         <img src="movie hub1.png" width="150px" height="70px">
-   
+        
     </header>
-    
-<div class="slider-container">
-  <div class="slider">
+    <div class="slider-container">
+    <div class="slider">
     <div class="slide">
-      <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-      <a href="link1.html"><img src="image 1.png" alt="Image 1"></a>
+    <div class="strike-word">Upcoming</div> <!-- Added strike word -->
+    <a href="link1.html"><img src="image1.png" alt="Image 1"></a>
     </div>
     <div class="slide">
-      <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-      <a href="link2.html"><img src="image2.jpg" alt="Image 2"></a>
+    <div class="strike-word">Upcoming</div> <!-- Added strike word -->
+    <a href="link2.html"><img src="image2.jpg" alt="Image 2"></a>
     </div>
     <div class="slide">
-      <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-      <a href="link3.html"><img src="image3.png" alt="Image 3"></a>
+    <div class="strike-word">Upcoming</div> <!-- Added strike word -->
+    <a href="link3.html"><img src="image3.png" alt="Image 3"></a>
     </div>
     <!-- Add more slides as needed -->
-  </div>
-</div>
-<script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll('.slide');
-  const slideWidth = slides[0].clientWidth;
-  
-  function nextSlide() {
+    </div>
+    </div>
+    <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideWidth = slides[0].clientWidth;
+    
+    function nextSlide() {
     slideIndex = (slideIndex + 1) % slides.length;
     updateSlider();
-  }
-  
-  function updateSlider() {
+    }
+    
+    function updateSlider() {
     document.querySelector('.slider').style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-  }
-  
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    }
+    
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+
+
     <main>
         <!-- Movie Review Section -->
         <section id="movieReviews">
