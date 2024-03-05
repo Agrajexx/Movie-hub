@@ -196,6 +196,51 @@
     <main>
         <!-- Movie Review Section -->
         <section id="movieReviews">
+
+            <article>
+                <h2> 12th fail </h2>
+                <img src="12thfail.jpg" alt="movie image">
+                <h1>Title: 12th Fail</h1>
+<p><em>Also known as 12th Fail</em></p>
+<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">9.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+<p>(9.2 based on 26932 user ratings) | 2h 27min</p>
+<p><strong>Release Date:</strong> 27 / 10 / 2023 (India) <span class="flag-icon flag-icon-in"></span> India</p>
+<p><strong>Genre:</strong> <span class="hashtag">#Biography</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
+<p><strong>Story Line:</strong> The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.</p>
+<p><strong>Director:</strong> Vidhu Vinod Chopra</p>
+<p><strong>Writers:</strong> Vidhu Vinod Chopra, Jaskunwar Kohli, Anurag Pathak</p>
+<p><strong>Actors:</strong> Vikrant Massey, Medha Shankar Joshi, Anantvijay Anshuman, Pushkar Geeta Agrawal Sharma, Harish Khanna</p>
+
+<script>
+    var rating = parseFloat(document.getElementById("ratingValue").innerText);
+    var starIcon = document.getElementById("starIcon");
+    
+    // Function to generate star icons based on rating
+    function generateStarIcons(rating) {
+        var fullStars = Math.floor(rating);
+        var remainder = rating - fullStars;
+        var starIcons = "";
+        
+        // Adding full star icons
+        for (var i = 0; i < fullStars; i++) {
+            starIcons += "⭐️";
+        }
+        
+        // Adding half star icon if needed
+        if (remainder >= 0.5) {
+            starIcons += "⭐️";
+        }
+        
+        starIcon.innerText = starIcons;
+    }
+    
+    // Generate star icons based on rating
+    generateStarIcons(rating);
+</script>
+                <br> <p class="color-change">"Tap Download for telegram files";</p>
+           <a href="https://telegram.me/+3mNbkKl4lUlhYWZl" class="button-81" role="button">DOWNLOAD</a>
+           
+            </article>
             
                       <article>
                           <h2>Blue Star</h2>
