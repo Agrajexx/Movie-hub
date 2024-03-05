@@ -22,44 +22,7 @@
   width: 100px;
   height: 100px;
 }
-        /* Popup container */
-  .popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-  }
-  
-  /* Popup content */
-  .popup-content {
-    background-color: #fefefe;
-    margin: 20% auto; /* 20% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    border-radius: 25px; /* Rounded corners */
-  }
-  
-  /* Close button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+        
 
         header {
             background-color: #fff; /* Coral header background */
@@ -205,65 +168,15 @@
     <div class="slider">
     <div class="slide">
     <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-    <a href="link1.html"><img src="image 1.png" alt="Open Popup 1" onclick="openPopup('popup1')" style="cursor: pointer;""></a><p><b><centre>March 8th  On Netflix</centre></b></p>
+    <img src="image 1.png" >
     </div>
     <div class="slide">
     <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-    <a href="link2.html"><img src="image2.jpg" alt="Open Popup 2" onclick="openPopup('popup2')" style="cursor: pointer;"></a><p><b><centre>March 8th From Zee5</centre></b></p>
+    <img src="image2.jpg" >
     </div>
     <div class="slide">
     <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-    <a href="link3.html"><img src="image 3.png" alt="Open Popup 2" onclick="openPopup('popup3')" style="cursor: pointer;"></a><p><b><centre> March 20th On DisneyPlushotstarMultiplex</centre></b></p>
-   <div id="popup1" class="popup" onclick="closePopup(event)">
-
-  <!-- Popup content -->
-  <div class="popup-content" onclick="event.stopPropagation()">
-    <span class="close" onclick="closePopup(event)">&times;</span>
-    <h2>Anweshippin Kandethum</h2>
-    <p>Malayalam Movie Streaming From March 8th Friday On Netflix Confirmed</p>
-  </div>
-
-</div>
-
-<!-- The second popup container -->
-<div id="popup2" class="popup" onclick="closePopup(event)">
-
-  <!-- Popup content -->
-  <div class="popup-content" onclick="event.stopPropagation()">
-    <span class="close" onclick="closePopup(event)">&times;</span>
-    <h2>Hanuman</h2>
-    <p>Telugu Film Streaming From March 8th From Zee5
-
-Expecting Audios:- മലയാളം | தமிழ் | తెలుగు | ಕನ್ನಡ | हिन्दी Audios Not Confirmed</p>
-  </div>
-
-</div>
-
-<!-- The third popup container -->
-<div id="popup3" class="popup" onclick="closePopup(event)">
-
-  <!-- Popup content -->
-  <div class="popup-content" onclick="event.stopPropagation()">
-    <span class="close" onclick="closePopup(event)">&times;</span>
-    <h2> Abraham0zler</h2>
-    <p>Malayalam Film  Streaming From March 20th On #DisneyPlushotstarMultiplex 
-
-🔊Audio:+ #Tamil, #Telugu, #Malayalam, #Kannada, #Hindi</p>
-  </div>
-
-</div>
-
-<script>
-// Function to open the popup
-function openPopup(popupId) {
-  document.getElementById(popupId).style.display = "block";
-}
-
-// Function to close the popup
-function closePopup(event) {
-  if (event.target === event.currentTarget) {
-    event.target.style.display = "none";
-  }
+    <img src="image 3.png" >
 }
 </script>
     </div>
