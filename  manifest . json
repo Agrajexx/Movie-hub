@@ -1,0 +1,19 @@
+{
+  "name": "Movie Hub",
+  "short_name": "Movie Hub",
+  "icons": [
+    {
+      "src": "movie hub1.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "movie hub1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
