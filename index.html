@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie  Hub</title>
-    <!-- Add Font Awesome CDN link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="movie hub1.png" sizes="180x180" href="/path/to/logo.png">
-   <link rel="manifest" href="manifest.json">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Hub</title><!-- Add Font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="movie hub1.png" sizes="180x180" href="/path/to/logo.png">
+  <link rel="manifest" href="manifest.json">
+  <style>
         /* Your custom styles for uniqueness */
         body {
             font-family: 'Arial', sans-serif;
@@ -18,10 +17,10 @@
             color: #333;
         }
         
-.logo {
+  .logo {
   width: 100px;
   height: 100px;
-}
+  }
         
 
         header {
@@ -156,34 +155,36 @@
         color: red; /* Change 'red' to any color you desire */
         }
         
-    </style>
+  </style>
 </head>
 <body>
-
-    <header>
-        <img src="movie hub1.png" width="150px" height="70px">
-        
-    </header>
-    <div class="slider-container">
-    <div class="slider">
-    <div class="slide">
-    <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-    <img src="image 1.png" >
-    </div>
-    <div class="slide">
-    <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-    <img src="image2.jpg" >
-    </div>
-    <div class="slide">
-    <div class="strike-word">Upcoming</div> <!-- Added strike word -->
-    <img src="image 3.png" >
-}
-</script>
-    </div>
-    <!-- Add more slides as needed -->
-    </div>
-    </div>
-    <script>
+  <header>
+    <img src="images/movie%20hub1.png" width="150px" height="70px" alt="movie%20hub1">
+  </header>
+  <div class="slider-container">
+  <div class="slider">
+  <div class="slide">
+  <div class="strike-word">Upcoming</div>
+  <a href="page1.html">
+  <img src="images/image%201.png" alt="image%201">
+  </a>
+  </div>
+  <div class="slide">
+  <div class="strike-word">Upcoming</div>
+  <a href="page2.html">
+  <img src="images/image2.jpg" alt="image2">
+  </a>
+  </div>
+  <div class="slide">
+  <div class="strike-word">Upcoming</div>
+  <a href="page3.html">
+  <img src="images/image%203.png" alt="image%203">
+  </a>
+  </div>
+  <!-- Add more slides as needed -->
+  </div>
+  </div>
+  <script>
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
     const slideWidth = slides[0].clientWidth;
@@ -198,484 +199,382 @@
     }
     
     setInterval(nextSlide, 3000); // Change slide every 3 seconds
-    </script>
+  </script>
+  <main>
+    <!-- Movie Review Section -->
+    <section id="movieReviews">
+      <article>
+        <h2>12th fail</h2><img src="images/12thfail.jpg" alt="movie image">
+        <h1>Title: 12th Fail</h1>
+        <p><em>Also known as 12th Fail</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">9.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(9.2 based on 26932 user ratings) | 2h 27min</p>
+        <p><strong>Release Date:</strong> 27 / 10 / 2023 (India) India</p>
+        <p><strong>Genre:</strong> <span class="hashtag">#Biography</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
+        <p><strong>Story Line:</strong> The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.</p>
+        <p><strong>Director:</strong> Vidhu Vinod Chopra</p>
+        <p><strong>Writers:</strong> Vidhu Vinod Chopra, Jaskunwar Kohli, Anurag Pathak</p>
+        <p><strong>Actors:</strong> Vikrant Massey, Medha Shankar Joshi, Anantvijay Anshuman, Pushkar Geeta Agrawal Sharma, Harish Khanna</p>
+        <h2>🔊Audio:- മലയാളം | தமிழ் |&nbsp;తెలుగు | ಕನ್ನಡ | हिन्दी</h2>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
 
-
-    <main>
-        <!-- Movie Review Section -->
-        <section id="movieReviews">
-
-            <article>
-                <h2> 12th fail </h2>
-                <img src="12thfail.jpg" alt="movie image">
-                <h1>Title: 12th Fail</h1>
-<p><em>Also known as 12th Fail</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">9.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(9.2 based on 26932 user ratings) | 2h 27min</p>
-<p><strong>Release Date:</strong> 27 / 10 / 2023 (India) <span class="flag-icon flag-icon-in"></span> India</p>
-<p><strong>Genre:</strong> <span class="hashtag">#Biography</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
-<p><strong>Story Line:</strong> The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.</p>
-<p><strong>Director:</strong> Vidhu Vinod Chopra</p>
-<p><strong>Writers:</strong> Vidhu Vinod Chopra, Jaskunwar Kohli, Anurag Pathak</p>
-<p><strong>Actors:</strong> Vikrant Massey, Medha Shankar Joshi, Anantvijay Anshuman, Pushkar Geeta Agrawal Sharma, Harish Khanna</p>
-                <h2>🔊Audio:- മലയാളം | தமிழ் | తెలుగు | ಕನ್ನಡ | हिन्दी</h2>
-
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
-        starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-                <br> <p class="color-change">"Tap Download for telegram files";</p>
-           <a href="https://telegram.me/+3mNbkKl4lUlhYWZl" class="button-81" role="button">DOWNLOAD</a>
-           
-            </article>
-            
-                      <article>
-                          <h2>Blue Star</h2>
-                           <img src="blue star.jpg" alt="Movie 1 Image">
-                          <h1>Title: Blue Star</h1>
-<p><em>Also known as Blue Star</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.6</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(7.6 based on 467 user ratings)</p>
-<p><strong>Duration:</strong> 2h 46min</p>
-<p><strong>Release Date:</strong> 25 / 1 / 2024 (India) <span class="flag-icon flag-icon-in"></span> <span itemprop="countryOfOrigin">India</span></p>
-<p><strong>Language:</strong> <span class="hashtag">#Tamil</span></p>
-<p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Comedy">🤣</span> Comedy, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Sport">⛹️‍♂️</span> Sport</p>
-<p><strong>Story Line:</strong> The cricket captains of Arakkonam, Ranjith and Rajesh, ignite a rivalry that ruins their chances of playing when politics interferes.</p>
-<p><strong>Directors:</strong> S. Jayakumar</p>
-<p><strong>Writers:</strong> S. Jayakumar, Tamizh Prabha</p>
-<p><strong>Stars:</strong> Ashok Selvan, Keerthi Pandian, Dhivya Dhuraisamy, Shanthnu Bhagyaraj, Bagavathi Perumal, Mullai Arasi Lizzie Antony</p>
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        starIcon.innerText = starIcons;
+        }
+
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/+3mNbkKl4lUlhYWZl" class="button-81" role="button">DOWNLOAD</a>
+      </article>
+      <article>
+        <h2>Blue Star</h2><img src="images/blue%20star.jpg" alt="Movie 1 Image">
+        <h1>Title: Blue Star</h1>
+        <p><em>Also known as Blue Star</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.6</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(7.6 based on 467 user ratings)</p>
+        <p><strong>Duration:</strong> 2h 46min</p>
+        <p><strong>Release Date:</strong> 25 / 1 / 2024 (India) <span itemprop="countryOfOrigin">India</span></p>
+        <p><strong>Language:</strong> <span class="hashtag">#Tamil</span></p>
+        <p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Comedy">🤣</span> Comedy, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Sport">⛹️‍♂️</span> Sport</p>
+        <p><strong>Story Line:</strong> The cricket captains of Arakkonam, Ranjith and Rajesh, ignite a rivalry that ruins their chances of playing when politics interferes.</p>
+        <p><strong>Directors:</strong> S. Jayakumar</p>
+        <p><strong>Writers:</strong> S. Jayakumar, Tamizh Prabha</p>
+        <p><strong>Stars:</strong> Ashok Selvan, Keerthi Pandian, Dhivya Dhuraisamy, Shanthnu Bhagyaraj, Bagavathi Perumal, Mullai Arasi Lizzie Antony</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
+
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
+
         starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-                          <br> <p class="color-change">"Tap Download for telegram files";</p>
-           <a href="https://telegram.me/BlueStarjexx" class="button-81" role="button">DOWNLOAD</a>
-           
-                      </article>
+        }
 
-                       <article>
-                           <h2>Malaikottai Vaaliban</h2>
-                           <img src="Malaikottai Vaaliban.jpg" alt="Movie 1 Image">
-<h1>Title: Malaikottai Vaaliban</h1>
-<p><em>Also known as Malaikottai Vaaliban</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(7 based on 2427 user ratings)</p>
-<p><strong>Duration:</strong> 2h 36min</p>
-<p><strong>Release Date:</strong> 25 / 1 / 2024 (India) <span class="flag-icon flag-icon-in"></span> <span itemprop="countryOfOrigin">India</span></p>
-<p><strong>Language:</strong> <span class="hashtag">#Tamil</span>, <span class="hashtag">#Malayalam</span></p>
-<p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Fantasy">✨</span> Fantasy, <span class="hashtag">#Thriller</span>, <span class="hashtag">#Western</span></p>
-<p><strong>Story Line:</strong> The story follows an aged warrior who travels across the land, proving himself unbeatable. With his experience, he returns to his village, which is under the colonization of marauding Spanish warriors, to challenge them to a one-on-one fight. However, an enemy from his sketchy past tracks him down and sabotages his efforts. Despite this, the warrior fights off the Spanish warriors and liberates the enslaved. His enemy continues to pursue him, causing the death of those close to him and driving a wedge between the remaining ones. Eventually, it is revealed that the warrior was deceived from birth; he is the son of an infamous mutant warrior. Those who cared for him as foster parents abducted him as a baby due to his genetic uniqueness, intending to train him to fight against his biological father using cunning and deception.</p>
-<p><strong>Directors:</strong> Lijo Jose Pellissery</p>
-<p><strong>Writers:</strong> P.S. Rafeeque, Lijo Jose Pellissery</p>
-<p><strong>Stars:</strong> Mohanlal, Sonalee Kulkarni, Hareesh Peradi, Manoj Moses, Katha Nandi, Danish Sait, Manikandan R. Achari</p>
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/BlueStarjexx" class="button-81" role="button">DOWNLOAD</a>
+      </article>
+      <article>
+        <h2>Malaikottai Vaaliban</h2><img src="images/Malaikottai%20Vaaliban.jpg" alt="Movie 1 Image">
+        <h1>Title: Malaikottai Vaaliban</h1>
+        <p><em>Also known as Malaikottai Vaaliban</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(7 based on 2427 user ratings)</p>
+        <p><strong>Duration:</strong> 2h 36min</p>
+        <p><strong>Release Date:</strong> 25 / 1 / 2024 (India) <span itemprop="countryOfOrigin">India</span></p>
+        <p><strong>Language:</strong> <span class="hashtag">#Tamil</span>, <span class="hashtag">#Malayalam</span></p>
+        <p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Fantasy">✨</span> Fantasy, <span class="hashtag">#Thriller</span>, <span class="hashtag">#Western</span></p>
+        <p><strong>Story Line:</strong> The story follows an aged warrior who travels across the land, proving himself unbeatable. With his experience, he returns to his village, which is under the colonization of marauding Spanish warriors, to challenge them to a one-on-one fight. However, an enemy from his sketchy past tracks him down and sabotages his efforts. Despite this, the warrior fights off the Spanish warriors and liberates the enslaved. His enemy continues to pursue him, causing the death of those close to him and driving a wedge between the remaining ones. Eventually, it is revealed that the warrior was deceived from birth; he is the son of an infamous mutant warrior. Those who cared for him as foster parents abducted him as a baby due to his genetic uniqueness, intending to train him to fight against his biological father using cunning and deception.</p>
+        <p><strong>Directors:</strong> Lijo Jose Pellissery</p>
+        <p><strong>Writers:</strong> P.S. Rafeeque, Lijo Jose Pellissery</p>
+        <p><strong>Stars:</strong> Mohanlal, Sonalee Kulkarni, Hareesh Peradi, Manoj Moses, Katha Nandi, Danish Sait, Manikandan R. Achari</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
+
         starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-               <br> <p class="color-change">"Tap Download for telegram files";</p>
-           <a href="https://telegram.me/+2FaRNhWHCyRlOWU9" class="button-81" role="button">DOWNLOAD</a>
-           
-                       </article>
+        }
 
-              <article>
-                  <h2>Poacher </h2>
-                  <img src="Poacher.jpg" alt="movie image">
-                  <h1>Title: Poacher</h1>
-<p><em>Also known as Poacher</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">8.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(8.2 based on 36 user ratings)</p>
-<p><strong>Release Date:</strong> 23 / 2 / 2024 (India)</p>
-<p><strong>Genre:</strong> <span class="hashtag">#Crime</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
-<p><strong>Story Line:</strong> A guilt-stricken man stumbles into a Forest Department outpost, confessing to the murder... of elephants. His admission sets off a gripping crime story, uncovering the devastating effects of illegal poaching activities and the elaborate web of cover-ups by the very people tasked to protect wildlife. Under constant threat, a scattered group of officers, NGO workers, and volunteers chase leads and untangle threads in their search for justice. Facing down corruption and organized crime, they take on the biggest ivory poachers in the history of India, dedicated to dismantling an iniquitous conspiracy that at times seems as impenetrable as the forest around it.</p>
-<p><strong>Director:</strong> Richie Mehta</p>
-<p><strong>Actors:</strong> Nimisha Sajayan, Roshan Mathew, Dibyendu Bhattacharya, Ankith Madhav, Kani Kusruti, Sooraj Pops</p>
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/+2FaRNhWHCyRlOWU9" class="button-81" role="button">DOWNLOAD</a>
+      </article>
+      <article>
+        <h2>Poacher</h2><img src="images/Poacher.jpg" alt="movie image">
+        <h1>Title: Poacher</h1>
+        <p><em>Also known as Poacher</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">8.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(8.2 based on 36 user ratings)</p>
+        <p><strong>Release Date:</strong> 23 / 2 / 2024 (India)</p>
+        <p><strong>Genre:</strong> <span class="hashtag">#Crime</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
+        <p><strong>Story Line:</strong> A guilt-stricken man stumbles into a Forest Department outpost, confessing to the murder... of elephants. His admission sets off a gripping crime story, uncovering the devastating effects of illegal poaching activities and the elaborate web of cover-ups by the very people tasked to protect wildlife. Under constant threat, a scattered group of officers, NGO workers, and volunteers chase leads and untangle threads in their search for justice. Facing down corruption and organized crime, they take on the biggest ivory poachers in the history of India, dedicated to dismantling an iniquitous conspiracy that at times seems as impenetrable as the forest around it.</p>
+        <p><strong>Director:</strong> Richie Mehta</p>
+        <p><strong>Actors:</strong> Nimisha Sajayan, Roshan Mathew, Dibyendu Bhattacharya, Ankith Madhav, Kani Kusruti, Sooraj Pops</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
-        starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-                  <br> <p class="color-change">"Tap Download for telegram files";</p>
-              <a href="https://telegram.me/+7hkD2JhFipZmN2M9" class="button-81" role="button">DOWNLOAD</a>
-              
-              </article>
-            
-            
-               <article>
-                <h2>Dunki</h2>
-                <img src="Dunki.jpg" alt="Movie 1 Image">
-                  
-                <h1>Title: Dunki</h1>
-<p><em>Also known as Dunki</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(7.2 based on 62325 user ratings)</p>
-<p><strong>Duration:</strong> 2h 40min</p>
-<p><strong>Release Date:</strong> 21 / 12 / 2023 (Germany) <span class="flag-icon flag-icon-de"></span> <span itemprop="countryOfOrigin">India</span></p>
-<p><strong>Language:</strong> <span itemprop="inLanguage">Hindi</span></p>
-<p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Comedy">🤣</span> Comedy <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
-<p><strong>Story Line:</strong> Four friends from a village in Punjab share a common dream: to go to England. Their problem is that they have neither the visa nor the ticket. A soldier promises to take them to the land of their dreams. Dunki is a hilarious and heartwarming saga of a perilous journey, borders, friendships, nostalgia for home, and love that towers above it all.</p>
-<p><strong>Directors:</strong> Rajkumar Hirani</p>
-<p><strong>Writers:</strong> Abhijat Joshi, Rajkumar Hirani, Kanika Dhillon</p>
-<p><strong>Stars:</strong> Taapsee Pannu, Ryan Cretney, Priya Sindher, Ketan Desai, Deven Bhojani, Mohd. Ashique Hussain, Kiranpal Singh Dhody</p>
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        starIcon.innerText = starIcons;
+        }
+
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/+7hkD2JhFipZmN2M9" class="button-81" role="button">DOWNLOAD</a>
+      </article>
+      <article>
+        <h2>Dunki</h2><img src="images/Dunki.jpg" alt="Movie 1 Image">
+        <h1>Title: Dunki</h1>
+        <p><em>Also known as Dunki</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(7.2 based on 62325 user ratings)</p>
+        <p><strong>Duration:</strong> 2h 40min</p>
+        <p><strong>Release Date:</strong> 21 / 12 / 2023 (Germany) <span itemprop="countryOfOrigin">India</span></p>
+        <p><strong>Language:</strong> <span itemprop="inLanguage">Hindi</span></p>
+        <p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Comedy">🤣</span> Comedy <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
+        <p><strong>Story Line:</strong> Four friends from a village in Punjab share a common dream: to go to England. Their problem is that they have neither the visa nor the ticket. A soldier promises to take them to the land of their dreams. Dunki is a hilarious and heartwarming saga of a perilous journey, borders, friendships, nostalgia for home, and love that towers above it all.</p>
+        <p><strong>Directors:</strong> Rajkumar Hirani</p>
+        <p><strong>Writers:</strong> Abhijat Joshi, Rajkumar Hirani, Kanika Dhillon</p>
+        <p><strong>Stars:</strong> Taapsee Pannu, Ryan Cretney, Priya Sindher, Ketan Desai, Deven Bhojani, Mohd. Ashique Hussain, Kiranpal Singh Dhody</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
+
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
+
         starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-                 <br> <p class="color-change">"Tap Download for telegram files";</p>
-              <a href="https://telegram.me/+lkZpaLHSXIg2ODdl" class="button-81" role="button">DOWNLOAD</a>
-              
-               </article>
-            <!-- Sample Review 1 -->
-            <article>
-                <h2>The Kerala Story</h2>
-                <img src="Kerala story.jpg" alt="Movie 1 Image">
-                
-                <h1>Title: The Kerala Story</h1>
-                <p><em>Also Known As The Kerala Story</em></p>
-                <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.1</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-                <p>(7.1 based on 67076 user ratings) | 2h 18min</p>
-                <p><strong>Release Date:</strong> / / 2023 (Germany)</p>
-                <p><strong>Language:</strong> <span class="hashtag">#Malayalam</span>, <span class="hashtag">#Tamil</span>, <span class="hashtag">#Telugu</span>, <span class="hashtag">#Hindi</span></p>
-                <p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama</p>
-                <p><strong>Story Line:</strong> Fatima Ba (previously Shalini Unnikrishnan), an ex-Hindu woman from Kerala narrates her story of being converted and induced to become a suicide bomber working for ISIS. The narrative chronicles the story of two more Non-Muslim nursing students from Kerala who are used as the perpetrators of communal "jihad." The film explores the toolkit of luring innocent youth (especially women) into committing acts of terrorism by systematic brainwashing, substance abuse, sexual exploitation and illegal trafficking across borders and also the inherent problem with exclusionist religious fanatics of Islam.</p>
-                <p><strong>Director:</strong> Sudipto Sen, Vipul Amrutlal Shah</p>
-                <p><strong>Writers:</strong> Suryapal Singh, Sudipto Sen, Vipul Amrutlal Shah</p>
-                <p><strong>Actors:</strong> Adah Sharma, Yogita Bihani, Sonia Balani, Siddhi Idnani, Devadarshini, Chetan Vijay Krishna</p>
-
-               <script>
-     
-                 var rating = parseFloat(document.getElementById("ratingValue").innerText);
-                 var starIcon = document.getElementById("starIcon");
-                 
-                 // Function to generate star icons based on rating
-                function generateStarIcons(rating) {
-                  var fullStars = Math.floor(rating);
-                  var remainder = rating - fullStars;
-                  var starIcons = "";
-                 // Adding full star icons
-               for (var i = 0; i < fullStars; i++) {
-            starIcons += "⭐️";
         }
-        
-        // Adding half star icon if needed
-        if (remainder >= 0.5) {
-            starIcons += "⭐️";
-        }
-        
-        starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-              </script>
-                <br> <p class="color-change">"Tap Download for telegram files";</p>
-                 <a href="https://telegram.me/+oj7c2_t0UbhiZWI1" class="button-81" role="button">DOWNLOAD</a>
-                 
-                 </article>
 
-            <!-- Sample Review 2 -->
-            <article>
-                <h2>Queen Elizabeth</h2>
-                <img src="queen elizabeth.jpg" alt="Movie 2 Image">
-                <h1>Title: Queen Elizabeth</h1>
-<p><em>Also known as Queen Elizabeth</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.5</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(7.5 based on 379 user ratings) | 1h 59min</p>
-<p><strong>Release Date:</strong> 29 / 12 / 2023 (India)</p>
-<p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Comedy">🤣</span> Comedy, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Family">👨‍👩‍👧‍👧</span> Family, <span class="emoji" role="img" aria-label="Romance">🌹</span> Romance</p>
-<p><strong>Story Line:</strong> The evil flourish in the deepest recess. They gain energy from other people's agony and pain. However, in life, our capacity for overcoming obstacles is an indicator of our moral fortitude.</p>
-<p><strong>Director:</strong> M. Padmakumar</p>
-<p><strong>Writer:</strong> Arjun T. Sathyan</p>
-<p><strong>Actors:</strong> Shweta Menon, V.K. Prakash, Jude Anthany Joseph, Narain, Johny Antony, Manju Pathrose</p>
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/+lkZpaLHSXIg2ODdl" class="button-81" role="button">DOWNLOAD</a>
+      </article><!-- Sample Review 2 -->
+      <article>
+        <h2>Queen Elizabeth</h2><img src="images/queen%20elizabeth.jpg" alt="Movie 2 Image">
+        <h1>Title: Queen Elizabeth</h1>
+        <p><em>Also known as Queen Elizabeth</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.5</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(7.5 based on 379 user ratings) | 1h 59min</p>
+        <p><strong>Release Date:</strong> 29 / 12 / 2023 (India)</p>
+        <p><strong>Genre:</strong> <span class="emoji" role="img" aria-label="Comedy">🤣</span> Comedy, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Family">👨‍👩‍👧‍👧</span> Family, <span class="emoji" role="img" aria-label="Romance">🌹</span> Romance</p>
+        <p><strong>Story Line:</strong> The evil flourish in the deepest recess. They gain energy from other people's agony and pain. However, in life, our capacity for overcoming obstacles is an indicator of our moral fortitude.</p>
+        <p><strong>Director:</strong> M. Padmakumar</p>
+        <p><strong>Writer:</strong> Arjun T. Sathyan</p>
+        <p><strong>Actors:</strong> Shweta Menon, V.K. Prakash, Jude Anthany Joseph, Narain, Johny Antony, Manju Pathrose</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
+
         starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-                <br> <p class="color-change">"Tap Download for telegram files";</p>
-              <a href="http://telegram.me/+H5hnefeb2PU5MWZl" class="button-81" role="button">DOWNLOAD</a>
-              
-              </article>
+        }
 
-            <!-- Sample Review 3 -->
-            <article>
-                <h2>Captain Miller</h2>
-                <img src="captain miller.jpg" alt="Movie 3 Image">
-                <h1>Title: Captain Miller</h1>
-<p><em>Also known as Captain Miller</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(7.2 based on 3571 user ratings) | 2h 37min</p>
-<p><strong>Release Date:</strong> 12 / 1 / 2024 (India)</p>
-<p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="hashtag">#Adventure</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="hashtag">#Thriller</span></p>
-<p><strong>Story Line:</strong> Set in 1930s-1940s in British India and follows an outlaw called miller who engages in bloody loots, heists and assaults.</p>
-<p><strong>Director:</strong> Arun Matheswaran</p>
-<p><strong>Writers:</strong> Arunraja Kamaraj, Madhan Karky, Arun Matheswaran</p>
-<p><strong>Actors:</strong> Dhanush, John Kokken, Antony, Sundeep Kishan, Nivedhithaa Sathish, Priyanka Arulmohan</p>
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="http://telegram.me/+H5hnefeb2PU5MWZl" class="button-81" role="button">DOWNLOAD</a>
+      </article><!-- Sample Review 3 -->
+      <article>
+        <h2>Captain Miller</h2><img src="images/captain%20miller.jpg" alt="Movie 3 Image">
+        <h1>Title: Captain Miller</h1>
+        <p><em>Also known as Captain Miller</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">7.2</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(7.2 based on 3571 user ratings) | 2h 37min</p>
+        <p><strong>Release Date:</strong> 12 / 1 / 2024 (India)</p>
+        <p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="hashtag">#Adventure</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="hashtag">#Thriller</span></p>
+        <p><strong>Story Line:</strong> Set in 1930s-1940s in British India and follows an outlaw called miller who engages in bloody loots, heists and assaults.</p>
+        <p><strong>Director:</strong> Arun Matheswaran</p>
+        <p><strong>Writers:</strong> Arunraja Kamaraj, Madhan Karky, Arun Matheswaran</p>
+        <p><strong>Actors:</strong> Dhanush, John Kokken, Antony, Sundeep Kishan, Nivedhithaa Sathish, Priyanka Arulmohan</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
-        starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-                <br> <p class="color-change">"Tap Download for telegram files";</p>
-             <a href="https://telegram.me/+e8TweLzaThFkNWNl" class="button-81" role="button">DOWNLOAD</a>
-             
-             </article>
-             
-             <article>
-             <h2>Guntur Kaaram</h2>
-             <img src="guntoor karan.jpg" alt="Movie 3 Image">
-                 <h1>Title: Guntur Kaaram</h1>
-<p><em>Also known as Guntur Kaaram</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">6.1</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(6.1 based on 17139 user ratings) | 2h 39min</p>
-<p><strong>Release Date:</strong> 12 / 1 / 2024 (India)</p>
-<p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Family">👨‍👩‍👧‍👧</span> Family</p>
-<p><strong>Story Line:</strong> Follows Guntur Kaaram, a story of a guy named 'Ramana' and his mother how she left him and how Ramana tried to get her mother back to his family</p>
-<p><strong>Director:</strong> Trivikram Srinivas</p>
-<p><strong>Writer:</strong> Trivikram Srinivas</p>
-<p><strong>Actors:</strong> Mahesh Babu, Sreeleela, Meenaakshi Chaudhary, Ramya Krishnan, Jayaram, Prakash Raj</p>
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        starIcon.innerText = starIcons;
+        }
+
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/+e8TweLzaThFkNWNl" class="button-81" role="button">DOWNLOAD</a>
+      </article>
+      <article>
+        <h2>Guntur Kaaram</h2><img src="images/guntoor%20karan.jpg" alt="Movie 3 Image">
+        <h1>Title: Guntur Kaaram</h1>
+        <p><em>Also known as Guntur Kaaram</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">6.1</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(6.1 based on 17139 user ratings) | 2h 39min</p>
+        <p><strong>Release Date:</strong> 12 / 1 / 2024 (India)</p>
+        <p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="emoji" role="img" aria-label="Drama">🎭</span> Drama, <span class="emoji" role="img" aria-label="Family">👨‍👩‍👧‍👧</span> Family</p>
+        <p><strong>Story Line:</strong> Follows Guntur Kaaram, a story of a guy named 'Ramana' and his mother how she left him and how Ramana tried to get her mother back to his family</p>
+        <p><strong>Director:</strong> Trivikram Srinivas</p>
+        <p><strong>Writer:</strong> Trivikram Srinivas</p>
+        <p><strong>Actors:</strong> Mahesh Babu, Sreeleela, Meenaakshi Chaudhary, Ramya Krishnan, Jayaram, Prakash Raj</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
+
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
-        starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-             <br> <p class="color-change">"Tap Download for telegram files";</p>
-             <a href="https://telegram.me/+1iwtoJWG_U1iODk1" class="button-81" role="button">DOWNLOAD</a>
-             
-             </article>
-             
-             
-             <article>
-             <h2>Ayalaan</h2>
-             <img src="ayalan.jpg" alt="Movie 3 Image">
-             <h1>Title: Ayalaan</h1>
-<p><em>Also known as Ayalaan</em></p>
-<p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">6.8</span> / 10 <span id="starIcon" class="star-icon"></span></p>
-<p>(6.8 based on 2030 user ratings)</p>
-<p><strong>Duration:</strong> 2h 35min</p>
-<p><strong>Release Date:</strong> 12 / 1 / 2024 (India) <span class="flag-icon flag-icon-in"></span> <span itemprop="countryOfOrigin">India</span></p>
-<p><strong>Language:</strong> <span class="hashtag">#Tamil</span>, <span class="hashtag">#Kannada</span>, <span class="hashtag">#Telugu</span>, <span class="hashtag">#Malayalam</span>, <span class="hashtag">#Hindi</span></p>
-<p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="hashtag">#Adventure</span>, <span class="emoji" role="img" aria-label="Sci-Fi">🤖</span> Sci-Fi</p>
-<p><strong>Story Line:</strong> A lost alien seeks help to go back to his home, but everything gets harder after the alien returns to its home.</p>
-<p><strong>Directors:</strong> R. Ravikumar</p>
-<p><strong>Writers:</strong> R. Ravikumar</p>
-<p><strong>Stars:</strong> Sivakarthikeyan, Rakul Preet Singh, Karunakaran, Bhanupriya, Sharad Kelkar, Isha Koppikar, Yogi Babu</p>
 
-<script>
-    var rating = parseFloat(document.getElementById("ratingValue").innerText);
-    var starIcon = document.getElementById("starIcon");
-    
-    // Function to generate star icons based on rating
-    function generateStarIcons(rating) {
+        starIcon.innerText = starIcons;
+        }
+
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/+1iwtoJWG_U1iODk1" class="button-81" role="button">DOWNLOAD</a>
+      </article>
+      <article>
+        <h2>Ayalaan</h2><img src="images/ayalan.jpg" alt="Movie 3 Image">
+        <h1>Title: Ayalaan</h1>
+        <p><em>Also known as Ayalaan</em></p>
+        <p><strong>Rating:</strong> <span id="ratingValue" itemprop="ratingValue">6.8</span> / 10 <span id="starIcon" class="star-icon"></span></p>
+        <p>(6.8 based on 2030 user ratings)</p>
+        <p><strong>Duration:</strong> 2h 35min</p>
+        <p><strong>Release Date:</strong> 12 / 1 / 2024 (India) <span itemprop="countryOfOrigin">India</span></p>
+        <p><strong>Language:</strong> <span class="hashtag">#Tamil</span>, <span class="hashtag">#Kannada</span>, <span class="hashtag">#Telugu</span>, <span class="hashtag">#Malayalam</span>, <span class="hashtag">#Hindi</span></p>
+        <p><strong>Genre:</strong> <span class="hashtag">#Action</span>, <span class="hashtag">#Adventure</span>, <span class="emoji" role="img" aria-label="Sci-Fi">🤖</span> Sci-Fi</p>
+        <p><strong>Story Line:</strong> A lost alien seeks help to go back to his home, but everything gets harder after the alien returns to its home.</p>
+        <p><strong>Directors:</strong> R. Ravikumar</p>
+        <p><strong>Writers:</strong> R. Ravikumar</p>
+        <p><strong>Stars:</strong> Sivakarthikeyan, Rakul Preet Singh, Karunakaran, Bhanupriya, Sharad Kelkar, Isha Koppikar, Yogi Babu</p>
+        <script>
+        var rating = parseFloat(document.getElementById("ratingValue").innerText);
+        var starIcon = document.getElementById("starIcon");
+
+        // Function to generate star icons based on rating
+        function generateStarIcons(rating) {
         var fullStars = Math.floor(rating);
         var remainder = rating - fullStars;
         var starIcons = "";
-        
+
         // Adding full star icons
         for (var i = 0; i < fullStars; i++) {
             starIcons += "⭐️";
         }
-        
+
         // Adding half star icon if needed
         if (remainder >= 0.5) {
             starIcons += "⭐️";
         }
-        
+
         starIcon.innerText = starIcons;
-    }
-    
-    // Generate star icons based on rating
-    generateStarIcons(rating);
-</script>
-             <br> <p class="color-change">"Tap Download for telegram files";</p>
-             <a href="https://telegram.me/+yP9G0AyTmqE0NjBl" class="button-81" role="button">DOWNLOAD</a>
-             
-             </article>
-          
-        </section>
-    </main>
+        }
 
-    <footer>
-        <p>&copy; 2024 Movie Hub. All rights reserved.</p>
-    </footer>
-
+        // Generate star icons based on rating
+        generateStarIcons(rating);
+        </script><br>
+        <p class="color-change">"Tap Download for telegram files";</p><a href="https://telegram.me/+yP9G0AyTmqE0NjBl" class="button-81" role="button">DOWNLOAD</a>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Movie Hub. All rights reserved.</p>
+  </footer>
 </body>
-</html>
+               </html>
