@@ -10,18 +10,20 @@
   </head>
   <style>
         /* Your custom styles for uniqueness */
-        body {
+
+  body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fde7bd; /* Light peach background */
             color: #333;
-          display: flex;
+            display: flex;
             min-height: 100vh;
             flex-direction: column;
+            
+            
         }
-
-         body.welcome {
+        body.welcome {
         overflow: hidden;
         -webkit-font-smoothing: antialiased;
         }
@@ -190,7 +192,7 @@
         opacity: 0;
         }
         }
-  
+        
   .logo {
   width: 100px;
   height: 100px;
@@ -228,6 +230,7 @@
         border-radius: 10px;
         cursor: pointer;
         transition: transform 0.3s ease;
+        
         }
         .slide img:hover {
         transform: scale(1.05);
@@ -254,7 +257,7 @@
             margin-bottom: 20px;
             padding: 20px;
             border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
             position: relative;
             overflow: hidden;
         }
@@ -266,8 +269,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, transparent 25%, #FFD700 25%, #FFD700 50%, transparent 50%, transparent 75%, #FFD700 75%, #FFD700); /* Diagonal lines pattern */
-            background-size: 50px 50px; /* Adjust pattern size as needed */
+            
+            background: linear-gradient(180deg, transparent 25%, #FFD700 25%, #FFD700 50%, transparent 50%, transparent 75%, #FFD700 75%, #FFD700); /* Diagonal lines pattern */
+            background-size: 90px 90px; /* Adjust pattern size as needed */
             opacity: 0.1; /* Adjust the opacity as needed */
             z-index: -1;
         }
@@ -289,8 +293,8 @@
         }
 
         footer {
-            background-color: #FF6F61; /* Coral footer background */
-            color: #fff;
+            background-color: #fff; /* Coral footer background */
+            color: #333;
             text-align: center;
             padding: 1em;
         }
@@ -329,6 +333,8 @@
         color: red; /* Change 'red' to any color you desire */
         }
         
+        
+
   </style>
 </head>
 <body>
