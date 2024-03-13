@@ -76,6 +76,23 @@
             padding: 20px;
         }
 
+        .character-row-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.character-row {
+  display: inline-block;
+}
+
+.round-character {
+  width: 80px; /* Adjust the size as needed */
+  height: 80px; /* Adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 10px; /* Adjust the spacing between characters */
+}
+
         article {
             background-color: #fff;
             margin-bottom: 20px;
@@ -155,6 +172,7 @@
         .color-change {
         color: red; /* Change 'red' to any color you desire */
         }
+    
         
   </style>
 </head>
@@ -296,7 +314,21 @@
   <p><strong>Director:</strong> Anand Ekarshi</p>
   <p><strong>Writer:</strong> Anand Ekarshi</p>
   <p><strong>Actors:</strong> Vinay Forrt, Zarin Shihab, Kalabhavan Shajohn, Madan Babu, Sudheer Babu, Nandini Gopalakrishnan</p>
-
+   <div class="character-row-container">
+    <div class="character-row">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/vinay-forrt-25344-1704094284.jpg" alt="Character 1" class="round-character">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/kalabhavan-shajon-36098-24-03-2017-17-45-31.jpg" alt=" Character 2" class="round-character">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/zarin-shihab-2026907-1704094328.jpg" alt="Character 3" class="round-character">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/nandan-unni-1067922-1647939030.jpg" alt="Character 1" class="round-character">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/selvaraj-raghavan-vr-2033187-1704093909.jpg" alt="Character 2" class="round-character">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/aji-thiruvankulam-2033188-1704093988.jpg" alt="Character 3" class="round-character">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/sanosh-murali-2033191-1704094424.jpg" alt=" Character 1" class="round-character">
+      <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/prasanth-madhavan-2033190-1704094222.jpg" alt="Character 2" class="round-character">
+      
+    </div>
+   </div>
+   
+        
   <script>
     var rating6 = parseFloat(document.getElementById("ratingValue6").innerText);
     var starIcon6 = document.getElementById("starIcon6");
