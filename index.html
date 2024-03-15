@@ -199,11 +199,17 @@
   </a>
   </div>
   <div class="slide">
-  <div class="strike-word">Upcoming</div>
-  <a href="Bramayugam.html">
+  <div class="strike-word"></div>
+  <a href="#movie00">
   <img src="Bramayugam.jpg" alt="bramayugam">
   </a>
   </div>
+    <div class="slide">
+  <div class="strike-word"></div>
+  <a href="#movie0">
+  <img src="Thundu1.jpg" alt="Thundu">
+  </a>
+    </div>
     <div class="slide">
   <div class="strike-word">Upcoming</div>
   <a href="lover.html">
@@ -301,7 +307,7 @@
     setInterval(nextSlide, 3000); // Change slide every 3 seconds
   </script>
   <main>
-   <article id="movie13">
+   <article id="movie00">
     <h2>Bramayugam</h2>
      <img src="Bramayugam1.jpg" alt="Aattam Poster" width="300">
     <h1>Title: Bramayugam</h1>
@@ -350,7 +356,51 @@
 
 
 
+<article id="movie0">
+    <img src="Thundu.jpg" alt="Thundu Poster" width="300">
+    <h2>Thundu</h2>
+    <h1>Title: Thundu</h1>
+    <p><em>Also known as Thundu</em></p>
+    <p><strong>Rating:</strong> <span id="ratingValue_14" itemprop="ratingValue">6.5</span> / 10 <span class="star-icon_14 star-icon"></span></p>
+    <p>(6.5 based on 154 user ratings) | 2h 5min</p>
+    <p><strong>Release Date:</strong> 16 / 2 / 2024 (India) <span class="flag-icon flag-icon-in"></span> India</p>
+    <p><strong>Genre:</strong> <span class="hashtag">#Action</span></p>
+    <p><strong>Story Line:</strong> Constable Baby planning for a promotion in his service finds himself unintentionally falling into a cascade of problems. He tackles those challenges with humor and heart, taking the audience through a roller coaster of emotions, family, friendship, and acceptance.</p>
+    <p><strong>Director:</strong> Riyas Shereef</p>
+    <p><strong>Writer:</strong> Kannappan Riyas Shereef</p>
+    <p><strong>Actors:</strong> Noushad Ali, Anand Bbal, Shine Tom Chacko, Shaju K.S., Biju Menon, Unnimaya Prasad</p>
 
+    <script>
+        var rating_14 = parseFloat(document.getElementById("ratingValue_14").innerText);
+        var starIcon_14 = document.querySelector(".star-icon_14");
+
+        // Function to generate star icons based on rating
+        function generateStarIcons_14(rating_14) {
+            var fullStars = Math.floor(rating_14);
+            var remainder = rating_14 - fullStars;
+            var starIconsHTML = "";
+
+            // Adding full star icons
+            for (var i = 0; i < fullStars; i++) {
+                starIconsHTML += "⭐️";
+            }
+
+            // Adding half star icon if needed
+            if (remainder >= 0.5) {
+                starIconsHTML += "⭐️";
+            }
+
+            return starIconsHTML;
+        }
+
+        // Generate star icons based on rating for this article
+        starIcon_14.innerHTML = generateStarIcons_14(rating_14);
+    </script>
+  <br>
+    <p class="color-change">"Tap Download for telegram files";</p><a href="http://telegram.me/+me9nLM-eAC1jZjI1" class="button-81" role="button">DOWNLOAD</a>
+    <p class="color-change">"Tap Download / Watch for Browser"(recommended);</p><a href="Thundu.html" class="button-81" role="button">DOWNLOAD / WATCH</a>
+  
+</article>
 
 
       
