@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color: #f2f2f2; /* Background color */
+    padding: 20px; /* Add padding to body */
+  }
+
+  article {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px; /* Increased padding */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    position: relative; /* Position relative to enable z-index */
+    z-index: 1; /* Ensure articles are above background */
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 0; /* Adjusted margin */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .button:hover {
+    background-color: #45a049; /* Darker Green */
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: space-between; /* Aligns items to each end */
+    align-items: center;
+    margin-top: 10px; /* Added margin to separate links from other content */
+  }
+</style>
+<title>File To Link Bot</title>
+</head>
+<body>
+
+<!-- Define your articles -->
+<article>
+  <h2>Fighter</h2>
+  <strong>✨ File Name:</strong> [MM] Fighter (2024) Hindi HDRip 720p .mkv<br>
+  <strong>✨ File Size:</strong> 1.49 GiB<br>
+  <div class="link-container">
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/772297/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+720p+.mkv?hash=AgADfB">Download</a>
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/watch/772297/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+720p+.mkv?hash=AgADfB">Watch</a>
+  </div>
+</article>
+
+<article>
+  <h2>Fighter</h2>
+  <strong>✨ File Name:</strong> [MM] Fighter (2024) Hindi HDRip .mkv<br>
+  <strong>✨ File Size:</strong> 429.08 MiB<br>
+  <div class="link-container">
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/772299/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+.mkv?hash=AgADkh">Download</a>
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/watch/772299/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+.mkv?hash=AgADkh">Watch</a>
+  </div>
+</article>
+
+<article>
+  <h2>Fighter</h2>
+  <strong>✨ File Name:</strong> [MM] Fighter (2024) Hindi HDRip 720p HEVC .mkv<br>
+  <strong>✨ File Size:</strong> 1.05 GiB<br>
+  <div class="link-container">
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/772298/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+720p+HEVC+.mkv?hash=AgAD9B">Download</a>
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/watch/772298/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+720p+HEVC+.mkv?hash=AgAD9B">Watch</a>
+  </div>
+</article>
+
+<article>
+  <h2>Fighter</h2>
+  <strong>✨ File Name:</strong> [MM] Fighter (2024) Hindi HDRip 1080p (DD+5.1 640Kbps.mkv<br>
+  <strong>✨ File Size:</strong> 3.08 GiB<br>
+  <div class="link-container">
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/772296/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+1080p+%28DD%2B5.1+640Kbps.mkv?hash=AgAD3x">Download</a>
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/watch/772296/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+1080p+%28DD%2B5.1+640Kbps.mkv?hash=AgAD3x">Watch</a>
+  </div>
+</article>
+
+<article>
+  <h2>Fighter</h2>
+  <strong>✨ File Name:</strong> [MM] Fighter (2024) Hindi HDRip .mkv<br>
+  <strong>✨ File Size:</strong> 722.81 MiB<br>
+  <div class="link-container">
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/772300/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+.mkv?hash=AgADhR">Download</a>
+    <a class="button" href="https://nx-file-to-link-z-6115dd1c0d53.herokuapp.com/watch/772300/%5BMM%5D+Fighter+%282024%29+Hindi+HDRip+.mkv?hash=AgADhR">Watch</a>
+  </div>
+</article>
+
+<script>
+  // Get all articles
+  const articles = document.querySelectorAll('article');
+
+  // Convert file sizes to bytes for comparison
+  const toBytes = size => {
+    const [num, unit] = size.split(' ');
+    const bytes= {
+    'GiB': 1024 ** 3,
+    'MiB': 1024 ** 2,
+    'KB': 1024,
+    'B': 1
+    };
+    return parseInt(num) * bytes[unit];
+    };
+    
+    // Sort articles by file size
+    const sortedArticles = Array.from(articles).sort((a, b) => {
+    const sizeA = toBytes(a.querySelector('strong:nth-child(4)').textContent.trim().split(':')[1]);
+    const sizeB = toBytes(b.querySelector('strong:nth-child(4)').textContent.trim().split(':')[1]);
+    return sizeA - sizeB;
+    });
+    
+    // Append sorted articles to the body
+    const body = document.querySelector('body');
+    sortedArticles.forEach(article => {
+    body.appendChild(article);
+    });
+    </script>
+    
+    </body>
+    </html>
