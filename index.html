@@ -297,7 +297,26 @@
        .color-change {
        color: #db0000; /* Updated red color for elements with .color-change class */
        }
-    
+
+         #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 95px;
+        }
+        
+        #myBtn:hover {
+        background-color: #555;
+        }
         
   </style>
 </head>
@@ -544,17 +563,9 @@ closeAllLists();
  "Blue Star",
  "12th Fail",
  "B 32 Muthal 44 Vare",
- ,"Rahel Makan Kora","Merry Christmas","Ayalaan",
- "Guntur Kaaram",
- "Captain Miller",
- "Queen Elizabeth",
- "Dunki",
- "Poacher",
- "Malaikottai Vaaliban",
- "Blue Star",
- "12th Fail",
- "B 32 Muthal 44 Vare",
-  "Anweshippin Kandethum","Bramayugam","Abraham Ozler", "fighter", "Marakkuma Nenjam", "Thundu", "Rani: The Real Story"];
+ "Rahel Makan Kora","Merry Christmas",
+ 
+ "Anweshippin Kandethum","Bramayugam","Abraham Ozler", "fighter", "Marakkuma Nenjam", "Thundu", "Rani: The Real Story"];
  
  autocomplete(document.getElementById("myInput"), countries);
  </script>
@@ -695,6 +706,29 @@ closeAllLists();
     }
     
     setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  </script>
+   <button onclick="topFunction()" id="myBtn" title="Go to top">Up</button>
+ 
+  <script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  mybutton.style.display = "block";
+  } else {
+  mybutton.style.display = "none";
+  }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  }
   </script>
   <main>
 
