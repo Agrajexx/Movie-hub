@@ -8,172 +8,295 @@
   <link rel="movie hub1.png" sizes="180x180" href="movie hub1.png">
   <link rel="manifest" href="manifest.json">
   </head>
-  <style>
-        /* Your custom styles for uniqueness */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fde7bd; /* Light peach background */
-            color: #333;
-        }
-        
-  .logo {
-  width: 100px;
-  height: 100px;
-  }
-        
-
-        header {
-            background-color: #fff; /* Coral header background */
-            color:#fff;
-            text-align: center;
-            padding: 1em;
-           
-              
-        }
-        .slider-container {
-        width: 80%;
-        margin: 0 auto;
-        position: relative; /* Added position relative */
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .slider {
+  <style>   /* Your custom styles for uniqueness */
+       body {
+       font-family: 'Arial', sans-serif;
+       margin: 0;
+       padding: 0;
+       background-color: #fde7bd; /* Light peach background */
+       color: #564d4d; /* Updated dark gray color */
+       }
+       
+       .logo {
+       width: 100px;
+       height: 100px;
+       }
+       
+       header {
+       background-color: #ffffff; /* White header background */
+       color: #ffffff; /* White text color */
+       text-align: center;
+       padding: 1em;
+       
+       }
+       
+       .slider-container {
+       width: 80%;
+       margin: 0 auto;
+       position: relative; /* Added position relative */
+       overflow: hidden;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+       }
+       
+       .slider {
+       width: 100%;
+       display: flex;
+       transition: transform 0.5s ease;
+       }
+       
+       .slide {
+       flex: 0 0 100%;
+       position: relative; /* Added position relative */
+       }
+       
+       .slide img {
+       width: 100%;
+       height: auto;
+       border-radius: 10px;
+       cursor: pointer;
+       transition: transform 0.3s ease;
+       }
+       
+       .slide img:hover {
+       transform: scale(1.05);
+       }
+       
+       .strike-word {
+       position: absolute;
+       top: 10px; /* Adjust the positioning as needed */
+       left: 10px; /* Adjust the positioning as needed */
+       font-size: 24px;
+       font-weight: bold;
+       color: #ffffff; /* Updated white color */
+       background-color: rgba(86, 77, 77, 0.5); /* Darkened background color */
+       padding: 5px 10px;
+       border-radius: 5px;
+       text-decoration: line-through;
+       }
+       
+       main {
+       padding: 20px;
+       }
+       
+       .character-row-container {
+       overflow-x: auto;
+       white-space: nowrap;
+       }
+       
+       .character-row {
+       display: inline-block;
+       }
+       
+       .round-character {
+       width: 80px; /* Adjust the size as needed */
+       height: 80px; /* Adjust the size as needed */
+       border-radius: 50%;
+       object-fit: cover;
+       margin: 0 10px; /* Adjust the spacing between characters */
+       }
+       
+       article {
+       background-color: #ffffff;
+       margin-bottom: 20px;
+       padding: 20px;
+       border-radius: 15px; /* Rounded corners */
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+       position: relative;
+       overflow: hidden;
+       }
+       
+       article::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: linear-gradient(45deg, transparent 25%, #db0000 25%, #db0000 50%, transparent 50%, transparent 75%, #db0000 75%, #db0000); /* Diagonal lines pattern with updated red color */
+       background-size: 50px 50px; /* Adjust pattern size as needed */
+       opacity: 0.1; /* Adjust the opacity as needed */
+       z-index: -1;
+       }
+       
+       h2 {
+       color: #564d4d; /* Dark gray text color */
+       margin-bottom: 10px;
+       }
+       
+       p {
+       color: #564d4d; /* Dark gray text color */
+       margin-bottom: 15px;
+       }
+       
+       img {
+       max-width: 100%; /* Ensure images don't exceed their container */
+       border-radius: 8px; /* Add rounded corners to images */
+       margin-bottom: 15px; /* Add space below images */
+       }
+       
+       footer {
+       background-color: #db0000; /* Coral footer background with updated red color */
+       color: #ffffff; /* White text color */
+       text-align: center;
+       padding: 1em;
+       }
+       
+       .star-icon {
+       color: #db0000; /* Gold color for the star with updated red color */
+       }
+       
+       .button-81 {
+       background-color: #fde7bd; /* Updated light peach background color */
+       border: 0 solid #e2e8f0;
+       border-radius: 1.5rem;
+       box-sizing: border-box;
+       color: #831010; /* Updated dark red color */
+       cursor: pointer;
+       display: inline-block;
+       font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+       font-size: 1.1rem;
+       font-weight: 600;
+       line-height: 1;
+       padding: 1rem 1.6rem;
+       text-align: center;
+       text-decoration: none #564d4d solid;
+       text-decoration-thickness: auto;
+       transition: all .1s cubic-bezier(.4, 0, .2, 1);
+       box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+       user-select: none;
+       -webkit-user-select: none;
+       touch-action: manipulation;
+       }
+       
+       .button-81:hover {
+       background-color: #fde7bd; /* Updated light peach background color */
+       color: #ffffff; /* White text color */
+       }
+       
+       .color-change {
+       color: #db0000; /* Updated red color */
+       }
+       
+       /* Reset some default styles for better consistency */
+       
+       .autocomplete {
+       position: relative;
+       display: inline-block;
+       z-index: 999;
+       }
+       
+       input {
+       border: 1px solid transparent;
+       background-color: #f1f1f1;
+       padding: 10px;
+       font-size: 16px;
+       z-index: 999;
         width: 100%;
-        display: flex;
-        transition: transform 0.5s ease;
-        }
-        .slide {
-        flex: 0 0 100%;
-        position: relative; /* Added position relative */
-        }
-        .slide img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        }
-        .slide img:hover {
-        transform: scale(1.05);
-        }
-        .strike-word {
-        position: absolute;
-        top: 10px; /* Adjust the positioning as needed */
-        left: 10px; /* Adjust the positioning as needed */
-        font-size: 24px;
-        font-weight: bold;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px 10px;
-        border-radius: 5px;
-        text-decoration: line-through;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .character-row-container {
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.character-row {
-  display: inline-block;
-}
-
-.round-character {
-  width: 80px; /* Adjust the size as needed */
-  height: 80px; /* Adjust the size as needed */
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 10px; /* Adjust the spacing between characters */
-
-}
-    
-
-        article {
-            background-color: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-            position: relative;
-            overflow: hidden;
-        }
-
-        article::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent 25%, #FFD700 25%, #FFD700 50%, transparent 50%, transparent 75%, #FFD700 75%, #FFD700); /* Diagonal lines pattern */
-            background-size: 50px 50px; /* Adjust pattern size as needed */
-            opacity: 0.1; /* Adjust the opacity as needed */
-            z-index: -1;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        img {
-            max-width: 100%; /* Ensure images don't exceed their container */
-            border-radius: 8px; /* Add rounded corners to images */
-            margin-bottom: 15px; /* Add space below images */
-        }
-
-        footer {
-            background-color: #FF6F61; /* Coral footer background */
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
-
-        .star-icon {
-            color: #FFD700; /* Gold color for the star */
-        }
-        .button-81 {
-        background-color: #fde7bd; /* Updated color */
-        border: 0 solid #e2e8f0;
-        border-radius: 1.5rem;
-        box-sizing: border-box;
-        color: #0d172a;
-        cursor: pointer;
-        display: inline-block;
-        font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-        font-size: 1.1rem;
-        font-weight: 600;
-        line-height: 1;
-        padding: 1rem 1.6rem;
-        text-align: center;
-        text-decoration: none #0d172a solid;
-        text-decoration-thickness: auto;
-        transition: all .1s cubic-bezier(.4, 0, .2, 1);
-        box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        }
-        
-        .button-81:hover {
-        background-color: #fde7bd; /* Updated color */
-        color: #fff;
-        }
-        .color-change {
-        color: red; /* Change 'red' to any color you desire */
-        }
+       
+       }
+       
+       input[type=text] {
+       background-color: #f1f1f1;
+       width: 100%;
+       z-index: 999;
+       }
+       
+       input[type=submit] {
+       width: 30%;
+       padding: 10px;
+       border: 0 solid #e2e8f0;
+       background-color: #;
+       color: #ffffff;
+       border-radius: 0 5px 5px 0;
+       cursor: pointer;
+       font-size: 16px;
+       }
+       
+       .autocomplete-items {
+       position: absolute;
+       border: 1px solid #d4d4d4;
+       border-bottom: none;
+       border-top: none;
+       z-index: 999;
+       /* position the autocomplete items to be the same width as the container: */
+       top: 100%;
+       left: 0;
+       right: 0;
+       }
+       
+       .autocomplete-items div {
+       padding: 10px;
+       cursor: pointer;
+       background-color: #ffffff;
+       border-bottom: 1px solid #d4d4d4;
+       z-index: 999;
+       }
+       
+       /* when hovering an item: */
+       .autocomplete-items div:hover {
+       background-color: #e9e9e9;
+       z-index: 999;
+       }
+       
+       /* when navigating through the items using the arrow keys: */
+       .autocomplete-active {
+       background-color: DodgerBlue !important;
+       color: #ffffff;
+       z-index: 999;
+       }
+       
+       /* Specific color updates */
+       input[type=submit] {
+       background-color: #db0000; /* Updated red color for submit button */
+       }
+       
+       .button-81 {
+       border: 0 solid #e2e8f0;
+       text-decoration: none #564d4d solid;
+       }
+       
+       .button-81:hover {
+       background-color: #db0000; /* Updated red color on hover for button */
+       color: #ffffff;
+       }
+       
+       .autocomplete-items div:hover {
+       background-color: #e9e9e9; /* Light gray background color on hover */
+       }
+       
+       .star-icon {
+       color: #db0000; /* Updated red color for star icon */
+       }
+       
+       .footer {
+       background-color: #db0000; /* Updated red color for footer */
+       color: #ffffff; /* White text color */
+       }
+       
+       .slider-container {
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+       }
+       
+       /* Diagonal lines pattern for article::before */
+       article::before {
+       background: linear-gradient(45deg, transparent 25%, #db0000 25%, #db0000 50%, transparent 50%, transparent 75%, #db0000 75%, #db0000); /* Updated red color for diagonal lines */
+       }
+       
+       /* Text color updates */
+       h2,
+       p {
+       color: #564d4d; /* Dark gray text color */
+       }
+       
+       .strike-word {
+       color: #ffffff; /* White text color for strike word */
+       background-color: rgba(86, 77, 77, 0.5); /* Darkened background color */
+       }
+       
+       .color-change {
+       color: #db0000; /* Updated red color for elements with .color-change class */
+       }
     
         
   </style>
@@ -182,6 +305,261 @@
   <header>
     <img src="movie%20hub1.png" width="150px" height="70px" alt="movie%20hub1">
   </header>
+  <br>
+ <form autocomplete="off" action="/action_page.php">
+ <div class="autocomplete" style="width:94.5%;">
+ <input id="myInput" type="text" name="myCountry" placeholder="Search...">
+ </div>
+
+ </form>
+ 
+ <script>
+ function autocomplete(inp, arr) {
+ var currentFocus;
+ 
+ inp.addEventListener("input", function(e) {
+ var a, b, i, val = this.value;
+ closeAllLists();
+ 
+ if (!val) { return false; }
+ 
+ currentFocus = -1;
+ a = document.createElement("DIV");
+ a.setAttribute("id", this.id + "autocomplete-list");
+ a.setAttribute("class", "autocomplete-items");
+ this.parentNode.appendChild(a);
+ 
+ for (i = 0; i < arr.length; i++) {
+ if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+ b = document.createElement("DIV");
+ b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+ b.innerHTML += arr[i].substr(val.length);
+ b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+ 
+ // Handle URL redirection based on selection
+ if (arr[i] === "Lover") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie23";
+ closeAllLists();
+ });
+ } else if (arr[i] === "fighter") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie22";
+ closeAllLists();
+ });
+ } else if (arr[i] === "Abraham Ozler") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie18";
+ closeAllLists();
+ });
+ } else if (arr[i] === "Thundu") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie0";
+ closeAllLists();
+ });
+ }else if (arr[i] === "Rahel Makan Kora") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie24";
+ closeAllLists();
+ });
+ }else if (arr[i] === "Marakkuma Nenjam") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie19";
+ closeAllLists();
+ });
+ }else if (arr[i] === "Bramayugam") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie00";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Aattam") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie14";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Rani: The Real Story") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie13";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Anweshippin Kandethum") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie12";
+ closeAllLists();
+ });
+ }else if (arr[i] === "Merry Christmas") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie11";
+ closeAllLists();
+ });
+ }else if (arr[i] === "Anweshippin Kandethum") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie12";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Ayalaan") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie1";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Guntur Kaaram") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie2";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Captain Miller") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie3";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Queen Elizabeth") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie4";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Dunki") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie5";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Poacher") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie6";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Malaikottai Vaaliban") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie7";
+ closeAllLists();
+ });
+ }
+ else if (arr[i] === "Blue Star") {
+ b.addEventListener("click", function(e) {
+ inp.value = this.getElementsByTagName("input")[0].value;
+ window.location.href = "#movie8";
+ closeAllLists();
+ });
+ }
+else if (arr[i] === "12th Fail") {
+b.addEventListener("click", function(e) {
+inp.value = this.getElementsByTagName("input")[0].value;
+window.location.href = "#movie9";
+closeAllLists();
+});
+}
+else if (arr[i] === "B 32 Muthal 44 Vare") {
+b.addEventListener("click", function(e) {
+inp.value = this.getElementsByTagName("input")[0].value;
+window.location.href = "#movie10";
+closeAllLists();
+});
+}
+
+ a.appendChild(b);
+ }
+ }
+ });
+ 
+ inp.addEventListener("keydown", function(e) {
+ var x = document.getElementById(this.id + "autocomplete-list");
+ if (x) x = x.getElementsByTagName("div");
+ if (e.keyCode == 40) {
+ currentFocus++;
+ addActive(x);
+ } else if (e.keyCode == 38) {
+ currentFocus--;
+ addActive(x);
+ } else if (e.keyCode == 13) {
+ e.preventDefault();
+ if (currentFocus > -1) {
+ if (x) x[currentFocus].click();
+ }
+ }
+ });
+ 
+ function addActive(x) {
+ if (!x) return false;
+ removeActive(x);
+ if (currentFocus >= x.length) currentFocus = 0;
+ if (currentFocus < 0) currentFocus = (x.length - 1);
+ x[currentFocus].classList.add("autocomplete-active");
+ }
+ 
+ function removeActive(x) {
+ for (var i = 0; i < x.length; i++) {
+ x[i].classList.remove("autocomplete-active");
+ }
+ }
+ 
+ function closeAllLists(elmnt) {
+ var x = document.getElementsByClassName("autocomplete-items");
+ for (var i = 0; i < x.length; i++) {
+ if (elmnt != x[i] && elmnt != inp) {
+ x[i].parentNode.removeChild(x[i]);
+ }
+ }
+ }
+ 
+ document.addEventListener("click", function (e) {
+ closeAllLists(e.target);
+ });
+ }
+ 
+ var countries = ["Lover", "Aattam","Ayalaan",
+ "Guntur Kaaram",
+ "Captain Miller",
+ "Queen Elizabeth",
+ "Dunki",
+ "Poacher",
+ "Malaikottai Vaaliban",
+ "Blue Star",
+ "12th Fail",
+ "B 32 Muthal 44 Vare",
+ ,"Rahel Makan Kora","Merry Christmas","Ayalaan",
+ "Guntur Kaaram",
+ "Captain Miller",
+ "Queen Elizabeth",
+ "Dunki",
+ "Poacher",
+ "Malaikottai Vaaliban",
+ "Blue Star",
+ "12th Fail",
+ "B 32 Muthal 44 Vare",
+  ,"Anweshippin Kandethum","Bramayugam","Abraham Ozler", "fighter", "Marakkuma Nenjam", "Thundu", "Rani: The Real Story"];
+ 
+ autocomplete(document.getElementById("myInput"), countries);
+ </script>
+  <br>
+  
   <div class="slider-container">
   <div class="slider">
 
