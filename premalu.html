@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color: #f2f2f2; /* Background color */
+    padding: 20px; /* Add padding to body */
+  }
+
+  article {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px; /* Increased padding */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+    position: relative; /* Position relative to enable z-index */
+    z-index: 1; /* Ensure articles are above background */
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 0; /* Adjusted margin */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .button:hover {
+    background-color: #45a049; /* Darker Green */
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: space-between; /* Aligns items to each end */
+    align-items: center;
+    margin-top: 10px; /* Added margin to separate links from other content */
+  }
+</style>
+<title>File To Link Bot</title>
+</head>
+<body>
+
+<!-- Define your articles -->
+<article>
+  <h2>🐈 Download Link Generated</h2>
+  <strong>📘 File Name:</strong> [MS] Premalu (2024) Malayalam 720p DSNP WEBDL HEVC DDP5.1 x2.mkv<br>
+  <strong>📀 Size:</strong> 1.03 GiB<br>
+  <div class="link-container">
+    <a class="button" href="http://amc-dev-x-e1b0c827f6d4.herokuapp.com/download/291884">Download</a>
+    <a class="button" href="http://amc-dev-x-e1b0c827f6d4.herokuapp.com/watch/291884">Online Watch</a>
+  </div>
+  <p>💡 Powered By: @TGFilmZone</p>
+</article>
+
+<script>
+  // Get all articles
+  const articles = document.querySelectorAll('article');
+
+  // Convert file sizes to bytes for comparison
+  const toBytes = size => {
+    const [num, unit] = size.split(' ');
+    const bytes = {
+      'GiB': 1024 ** 3,
+      'MiB': 1024 ** 2,
+      'KB': 1024,
+      'B': 1
+    };
+    return parseInt(num) * bytes[unit];
+  };
+  
+  // Sort articles by file size
+  const sortedArticles = Array.from(articles).sort((a, b) => {
+    const sizeA = toBytes(a.querySelector('strong:nth-child(4)').textContent.trim().split(':')[1]);
+    const sizeB = toBytes(b.querySelector('strong:nth-child(4)').textContent.trim().split(':')[1]);
+    return sizeA - sizeB;
+  });
+  
+  // Append sorted articles to the body
+  const body = document.querySelector('body');
+  sortedArticles.forEach(article => {
+    body.appendChild(article);
+  });
+</script>
+
+</body>
+</html>
