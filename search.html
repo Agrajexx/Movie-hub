@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Your CSS styles -->
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        
+        /* Search bar styles */
+        .search-container {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+        }
+       
+        .search-input {
+            padding: 15px;
+            width: calc(100% - 120px);
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #fff;
+            font-size: 18px;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            outline: none;
+            padding-left: 50px;
+        }
+        
+        .search-input:focus {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Suggestions styles */
+        .suggestions {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .suggestion {
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: #fffff;
+            color: #000000;
+            border-radius: 25px;
+            padding: 15px 30px;
+            display: block; /* Change display to block */
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            font-size: 17px;
+            position: relative;
+            
+        }
+        
+        .suggestion:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .suggestion:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        
+        .search-container {
+            background-color: #fff;
+            /* Add any other styling you need */
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        
+        .back-button svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2px;
+            stroke: #333;
+            fill: none;
+            transition: stroke 0.3s ease;
+        }
+        
+        .back-button:hover svg {
+            stroke: #555;
+        }
+        
+        .keyword {
+            background-color: yellow;
+            /* Adjust other styles as needed */
+        }
+
+        /* Hide trending words section by default */
+        #trendingWordsSection.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Your website's content -->
+<div class="container">
+    <div class="search-container">
+        <a href="index (6).html" target="_blank">
+        <div class="back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        </div>
+        </a>
+        
+        <input type="text" class="search-input" id="searchInput" onkeyup="showSuggestions(this.value)" placeholder="Enter your search term">
+    </div>
+        
+    <div class="trending-words" id="trendingWordsSection">
+       <h2 style="color:#eb4e62; font-size:14px; margin-left:10px;">Popular/Trending Searches</h2>
+        <div class="suggestions" id="trendingWordsList">
+            <!-- Trending words will appear here -->
+          <a class="suggestion" href="Aavesham.html" style="position: relative;"><i class="fa fa-film" style="font-size:24px; position: absolute; right: 10%;"></i> Aavesham</a>
+           <a class="suggestion" href="Manjummel Boys.html" style="position: relative;"><i class="fa fa-film" style="font-size:24px; position: absolute; right: 10%;"></i>Manjummel Boys</a>
+            <a class="suggestion" href="Premalu.html" style="position: relative;"><i class="fa fa-film" style="font-size:24px; position: absolute; right: 10%;"></i>Premalu</a>
+            <a class="suggestion" href="Anchakkallakokkan.html" style="position: relative;"><i class="fa fa-film" style="font-size:24px; position: absolute; right: 10%;"></i>Anchakkallakokkan</a>
+            <a class="suggestion" href="bramayugam.html" style="position: relative;"><i class="fa fa-film" style="font-size:24px; position: absolute; right: 10%;"></i>Bramayugam</a>
+            <a class="suggestion" href="Aattam.html" style="position: relative;"><i class="fa fa-film" style="font-size:24px; position: absolute; right: 10%;"></i>Aattam</a>
+            <a class="suggestion" href="lover.html" style="position: relative;"><i class="fa fa-film" style="font-size:24px; position: absolute; right: 10%;"></i>lover</a>
+            </div>
+    </div>
+    
+    <div class="suggestions" id="suggestionList">
+        <!-- Suggestions will appear here -->
+    </div>
+</div>
+
+
+<!-- Your JavaScript code -->
+<script>
+    function goBack() {
+        window.history.back();
+        const trendingWordsSection = document.getElementById('trendingWordsSection');
+        trendingWordsSection.classList.remove('hidden'); // Show trending words when going back
+    }
+
+    function showSuggestions(keyword) {
+        const suggestionList = document.getElementById('suggestionList');
+        suggestionList.innerHTML = ''; // Clear previous suggestions
+
+        // Hide trending words section if user starts searching
+        const trendingWordsSection = document.getElementById('trendingWordsSection');
+        if (keyword.trim() !== '') {
+            trendingWordsSection.classList.add('hidden');
+        } else {
+            trendingWordsSection.classList.remove('hidden');
+        }
+
+        // Replace 'keyword1', 'keyword2', etc. with your actual keywords and corresponding URLs
+        const keywords = [
+            { term: 'Aattam', url: 'Aattam.html' },
+            { term: 'lover', url: 'lover.html' },
+            { term: 'bramayugam', url: 'bramayugam.html' },
+            { term: 'Anchakkallakokkan', url: 'Anchakkallakokkan.html' },
+            { term: 'keyword5', url: 'https://example.com/link5' }
+        ];
+
+        // Filter keywords based on input
+        const filteredKeywords = keywords.filter(k => k.term.toLowerCase().includes(keyword.toLowerCase()));
+
+        // Generate HTML for suggestions
+        filteredKeywords.forEach(k => {
+            const suggestion = document.createElement('a'); // Create an anchor tag
+            suggestion.classList.add('suggestion');
+            suggestion.textContent = k.term;
+            suggestion.href = k.url; // Link to the specified URL
+            suggestionList.appendChild(suggestion);
+        });
+    }
+</script>
+
+
+    
+    </body>
+    </html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie & Series Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        .card {
+            width: 150px;
+            height:200px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+        .popup-content {
+            background-color: #fff;
+            border-radius: 5px;
+            width: 70%;
+            max-width: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            text-align: center;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie & Series Website</h1>
+    </header>
+    <nav>
+        <a href="#movies">Movies</a>
+        <a href="#series">Series</a>
+        <a href="#downloads">Downloads</a>
+    </nav>
+   <div class="container">
+   <div class="card">
+   <img src="lover.jpg" alt="Movie 1">
+   <div class="card-content">
+   <div class="card-title">lover.jpg</div>
+   <div class="card-description">Description of Movie 1.</div>
+   </div>
+   </div>
+   <!-- Add more movie cards here -->
+   
+   <div class="card">
+   <img src="series1.jpg" alt="movie 2">
+   <div class="card-content">
+   <div class="card-title">Series 1</div>
+   <div class="card-description"><p><strong>Also known as:</strong> Lover</p>
+   <p><strong>Rating ⭐️:</strong> 7.3 / 10 (7.3 based on 434 user ratings)</p>
+   <p><strong>Duration:</strong> 2h 25min</p>
+   <p><strong>Release Info:</strong> 9 / 2 / 2024 (India)</p>
+   <p><strong>Genre:</strong> 🎭 #Drama</p>
+   <p><strong>Story Line:</strong> Arun and Divya's six-year relationship starts unraveling as they drift apart, raising the question of whether love can withstand such differences.</p>
+   <p><strong>Director:</strong> Prabhu Ram Vyas</p>
+   <p><strong>Writer:</strong> Prabhu Ram Vyas</p>
+   <p><strong>Stars:</strong> Harini Sundararajan Manikandan K. Nikhila Sankar Kanna Ravi Sri Gouri Priya Harish Kumar</p>
+   </div>
+   </div>
+   </div>
+   <!-- Add more series cards here -->
+   
+   <!-- Add more cards here -->
+   </div><div class="container">
+   <div class="card">
+   <img src="movie1.jpg" alt="Movie 1">
+   <div class="card-content">
+   <div class="card-title">Movie 1</div>
+   <div class="card-description">Description of Movie 1.</div>
+   </div>
+   </div>
+   <!-- Add more movie cards here -->
+   
+   <div class="card">
+   <img src="series1.jpg" alt="Series 1">
+   <div class="card-content">
+   <div class="card-title">Series 1</div>
+   <div class="card-description">Description of Series 1.</div>
+   </div>
+   </div>
+   <!-- Add more series cards here -->
+   
+   <!-- Add more cards here -->
+   </div>
+
+    <!-- Popup for movie/series details -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+            <div class="button-container">
+                <button class="button watch-button">Watch</button>
+                <a href="#" id="popup-download" class="button download-button" download>Download</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Movie & Series Website</p>
+    </footer>
+
+    <script>
+        // Popup functionality
+        const cards = document.querySelectorAll('.card');
+        const popup = document.getElementById('popup');
+        const popupTitle = document.getElementById('popup-title');
+        const popupDescription = document.getElementById('popup-description');
+        const popupDownload = document.getElementById('popup-download');
+        const closePopup = document.querySelector('.close');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.querySelector('.card-title').textContent;
+                const description = card.querySelector('.card-description').textContent;
+
+                popupTitle.textContent = title;
+                popupDescription.textContent = description;
+
+                popup.style.display = 'block';
+            });
+        });
+
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

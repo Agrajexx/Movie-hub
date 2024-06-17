@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    
+    <title>Movie & Series Website</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F3F0F4; /* Light lavender background */
+}
+
+header {
+  background-color: #6A0DAD; /* Deep purple header */
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.5); /* Initial purple glow */
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.5), 0 0 10px rgba(106, 13, 173, 0.5), 0 0 15px rgba(106, 13, 173, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(106, 13, 173, 1), 0 0 30px rgba(106, 13, 173, 1), 0 0 40px rgba(106, 13, 173, 1);
+  }
+}
+
+h2 {
+  color: #2C3E50; /* Dark slate gray for headings */
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #6A0DAD; /* Deep purple for navigation links */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  background-color: #FFFFFF; /* White card background */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-content {
+  padding: 10px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6A0DAD; /* Deep purple for card titles */
+  margin-bottom: 5px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF; /* White for the popup */
+  color: #2C3E50; /* Dark slate gray text */
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 999;
+  height: auto;
+  width: 80%;
+  max-width: 80%;
+  overflow-y: auto;
+  max-height: 100vh;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 35px;
+  padding: 10px;
+  color: #6A0DAD; /* Deep purple for close button */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6A0DAD; /* Deep purple button */
+  color: #FFFFFF; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  /* No changes needed */
+}
+
+.slider-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; /* White background for the slider container */
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 80%;
+  margin-right: 10px;
+}
+
+.slide:last-child {
+  margin-right: 0;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+
+.Container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-all .cards-row {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #6A0DAD; /* Deep purple for search button */
+  cursor: pointer;
+}
+
+.search-button-container {
+  display: inline-block;
+}
+
+.search-button {
+  width: 40px;
+  height: 40px;
+}
+
+.search-button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.search-button-container {
+  position: absolute;
+  top:20px;
+  right: 20px;
+}
+
+.logo {
+         font-family: 'Baloo Chettan 2', sans-serif;
+         font-size: 22px; /* Reduced text size */
+         font-weight: bold;
+         color: #FFC107;
+         display:inline-block;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+     }
+     
+ .logo1 {
+ font-family: 'Baloo Chettan 2', sans-serif;
+ font-size: 16px; /* Reduced text size */
+ font-weight: bold;
+ color: #D4302D;
+ display:inline-block;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .highlight#netflix,
+ .highlight#release-date-netflix{
+ color: #E50914 ; /* Red color */
+ text-shadow: 0 0 8px #E50914; /* Add a glowing effect */
+ font-weight: bold; /* Make the text bold */
+ }
+ .highlight#release-date-hotstar,
+ .highlight#hotstar{
+ color: #01147C; 
+ text-shadow: 0 0 8px #01147C; 
+ font-weight: bold;
+ }
+ 
+  </style>
+</head>
+<body>
+    <header>
+        <img src="movie%20hub1.png" width="95px" height="45px" alt="movie%20hub1">
+    
+    <div class="search-button-container">
+    <button class="search-button" onclick="openSearchPage()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    </svg>
+    </button>
+    </div>
+    <br>
+      <div class="logo">"മഴ</div>
+      <div class="logo1"> കാലം"</div>
+  
+     <!-- Your JavaScript code -->
+     <script>
+     function openSearchPage() {
+     window.open("search.html", "_self");
+     }
+     </script>
+    </header>
+    
+    
+    
+    
+
+
+  <div class="container">
+    <h2><i>Upcoming films</i></h2>
+       <div class="card"  onclick="openPopup('popup1')">
+       <img src="Nadikar.png" alt="Movie 1">
+       <div class="card-content">
+       <div class="card-title"></div>
+       </div>
+       </div>
+       
+       
+      <div class="card" onclick="openPopup('popup2')">
+      <img src="thegoatlife.jpg" alt="the goat life">
+      <div class="card-content">
+      <div class="card-title"></div>
+      </div>
+      </div>
+  
+        <!-- Add more cards here -->
+  
+    </div>
+    
+ <div class="container">
+    <h2>New°²4</h2>
+    
+    <div class="card" onclick="openPopup('popup146')">
+    <img src="star2024.jpg" alt="star2024">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    <div class="card" onclick="openPopup('popup145')">
+    <img src="VarshangalkkuShesham.jpg" alt="Varshangalkku Shesham">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    <div class="card" onclick="openPopup('popup144')">
+    <img src="JaiGenesh.jpg" alt="Jai Genesh">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+   <div class="card" onclick="openPopup('popup143')">
+   <img src="LaapataaLadies.jpg" alt="Laapataa Ladies">
+   <div class="card-content">
+   <div class="card-title"></div>
+   </div>
+   </div>
+   
+   <div class="card" onclick="openPopup('popup142')">
+   <img src="ManjummelBoys.jpg" alt="Manjummel Boys">
+   <div class="card-content">
+   <div class="card-title"></div>
+   </div>
+   </div>
+   
+   <div class="card" onclick="openPopup('popup131')">
+   <img src="Anchakkallakokkan.jpg" alt="Anchakkallakokkan">
+   <div class="card-content">
+   <div class="card-title"></div>
+   </div>
+   </div>
+    
+    <div class="card" onclick="openPopup('popup141')">
+    <img src="siren.jpg" alt="siren">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    
+    <div class="card" onclick="openPopup('popup133')">
+    <img src="Premalu.jpg" alt="Premalu">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    <div class="card" onclick="openPopup('popup134')">
+    <img src="Rahel Makan Kora.jpg" alt="Rahel Makan Kora">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    <div class="card" onclick="openPopup('popup135')">
+    <img src="Thundu.jpg" alt="Thundu">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    <div class="card" onclick="openPopup('popup136')">
+    <img src="Lover.jpg" alt="Lover">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    <div class="card" onclick="openPopup('popup137')">
+    <img src="Aattam.jpg" alt="Aattam">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+    
+    
+    <div class="card" onclick="openPopup('popup140')">
+    <img src="Bramayugam1.jpg" alt="Bramayugam">
+    <div class="card-content">
+    <div class="card-title"></div>
+    </div>
+    </div>
+    
+  
+    
+  
+        <!-- Add more cards here -->
+  
+    </div>
+ 
+     
+    <!--upcoming-->
+   <div class="popup" id="popup1">
+   <span class="close" onclick="closePopup('popup1')">&times;</span>
+   <h2>Nadikar Release Date</h2>
+   <p>Nadikar, starring Tovino Thomas in the lead role, will be available to stream on   <a href="https://youtu.be/A7y9yXGJtUs?si=fVP148VH2GITHSns" target="_blank" style="text-decoration: none; color: inherit;">
+   <span class="highlight" id="netflix">Netflix</span>
+   from <span class="highlight" id="release-date-netflix">27 June</span>.</p>
+   <p>The plot follows the lavish life of a blockbuster actor, David, who spirals into drugs and arrogance as fame consumes him. His self-destructive behavior leads to a series of box office failures.</p>
+   </div></a>
+   
+   <div class="popup" id="popup2">
+   <span class="close" onclick="closePopup('popup2')">&times;</span>
+   <h2>Aadujeevitham Release Date</h2>
+   <p>Aadujeevitham, starring Prithviraj Sukumaran in the lead role, will be available to stream on <a href="https://youtu.be/qvsiJKdDxPs?si=_rIAP7hu71NU-UEa" target="_blank" style="text-decoration: none; color: inherit;">
+   <span class="highlight" id="hotstar">Hotstar</span>
+   </a> .</p>
+   <p>The plot follows  The real-life incident of an Indian migrant worker, Najeeb Muhammad, who goes to Saudi Arabia to earn money. However, in a twist of fate, he finds himself living a slave-like existence, herd.</p>
+   </div>
+   
+   
+   
+ 
+ 
+  
+    <!-- 2024start-->
+    
+        
+        
+        <div class="popup" id="popup146">
+        <span class="close" onclick="closePopup('popup146')">&times;</span>
+        <h1>Star [2024]</h1>
+        <p>Also Known As: Star</p>
+        <p>Rating ⭐️: 6.8 / 10 (6.8 based on 1273 user ratings)</p>
+        <p>Release Info: 7 / 6 / 2024 (India)</p>
+        <p>Genre: 🎭 #Drama</p>
+        <p>Language: #Tamil</p>
+        <p>Country of Origin: 🇮🇳 #India</p>
+        <p>Story Line: Follows a youngster Kalai and his aspirations of becoming a 'Star' in the Tamil Film Industry. Born in a lower-middle-class family, will Kalai overcome all his struggles to emerge as a Star?</p>
+        <p>Directors: Elan</p>
+        <p>Writers: Elan Thava Guru</p>
+        <p>Stars: Kavin, Lal, Aditi Sudhir Pohankar, Preity Mukhundhan, Geetha Kailasam, Lollu Sabha Maaran, Aarti Desai</p>
+        
+        <div class="button-container">
+        <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZg45D0ZEBFLLbcbfiSSIfXakCJnTHUR9GO7'" >  Watch</button>
+        </div>
+        </div>
+        
+        <div class="popup" id="popup145">
+        <span class="close" onclick="closePopup('popup145')">&times;</span>
+        <h1>Varshangalkku Shesham [2024]</h1>
+        <p>Also Known As: Varshangalkku Shesham</p>
+        <p>Rating ⭐️: 6.9 / 10 (6.9 based on 2548 user ratings)</p>
+        <p>Release Info: 11 / 4 / 2024 (India)</p>
+        <p>Genre: 🤣 #Comedy 🎭 #Drama</p>
+        <p>Language: #Malayalam</p>
+        <p>Country of Origin: 🇮🇳 #India</p>
+        <p>Story Line: The story of two friends set in two different time periods. Two boys, Murali and Venu, hailing from northern Kerala meet coincidentally and become friends.</p>
+        <p>Directors: Vineeth Sreenivasan</p>
+        <p>Writers: Vineeth Sreenivasan</p>
+        <p>Stars: Pranav Mohanlal, Dhyan Sreenivasan, Nivin Pauly, Aju Varghese, Basil Joseph, Kalyani Priyadarshan, Vineeth Sreenivasan</p>
+        
+        <div class="button-container">
+        <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZhDrW0Zs5VuXMSyqk00Qidhbsuj3fyacU4X'">Watch</button>
+        </div>
+        </div>
+        
+        <div class="popup" id="popup144">
+        <span class="close" onclick="closePopup('popup144')">&times;</span>
+        <h1>Jai Ganesh [2024]</h1>
+        <p>Also Known As: Jai Ganesh</p>
+        <p>Rating ⭐️: 6.1 / 10 (6.1 based on 882 user ratings)</p>
+        <p>Release Info: 11 / 4 / 2024 (India)</p>
+        <p>Genre: 🎭 #Drama</p>
+        <p>Language: #Malayalam</p>
+        <p>Country of Origin: 🇮🇳 #India</p>
+        <p>Story Line: Striving for normalcy, paraplegic designer Ganesh Gangadharan wrestles with inner demons in unforgiving shadows of sympathy.</p>
+        <p>Directors: Ranjith Sankar</p>
+        <p>Writers: Ranjith Sankar</p>
+        <p>Stars: Mahima Nambiar, Ann Jameela, Saleem, Unni Mukundan, Hareesh Peradi, Devaki Rajendran, Ravindra Vijay, Nandhu</p>
+        
+        <div class="button-container">
+        <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZcPRf0ZCipFkTUw7WYF4Xs8n3QdtymFhyvX'">Watch</button>
+        </div>
+        </div>
+    
+       <div class="popup" id="popup143">
+       <span class="close" onclick="closePopup('popup143')">&times;</span>
+       <h1>Laapataa Ladies [2023]</h1>
+       <p>Also Known As: Laapataa Ladies</p>
+       <p>Rating ⭐️: 8.5 / 10 (8.5 based on 31878 user ratings)</p>
+       <p>Release Info: 22 / 5 / 2024 (Germany)</p>
+       <p>Genre: 🤣 #Comedy 🎭 #Drama</p>
+       <p>Language: #Hindi</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: The misadventures of two young brides who get lost from the same train. From mistaken identities to laugh-out-aloud escapades, the ensuing chaos guarantees laughter galore and heartwarming moments.</p>
+       <p>Directors: Kiran Rao</p>
+       <p>Writers: Biplab Goswami, Divyanidhi Sharma, Sneha Desai</p>
+       <p>Stars: Nitanshi Goel, Pratibha Ranta, Sparsh Shrivastava, Chhaya Kadam, Ravi Kishan, Geeta Agrawal Sharma, Pankaj Sharma</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZ8xps0ZyWwqegkbPdmt9zU3HmJlJmvjhU7y'">Watch</button>
+       </div>
+       </div>
+       
+       
+       <div class="popup" id="popup142">
+       <span class="close" onclick="closePopup('popup142')">&times;</span>
+       <h1>Manjummel Boys [2024]</h1>
+       <p>Also Known As: Manjummel Boys</p>
+       <p>Rating ⭐️: 8.4 / 10 (8.4 based on 14930 user ratings)</p>
+       <p>Release Info: 22 / 2 / 2024 (India)</p>
+       <p>Genre: 🌋 #Adventure #Thriller</p>
+       <p>Language: #Malayalam, #Tamil</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: A group of friends get into a daring rescue mission to save their friend from Guna Caves, a perilously deep pit from where nobody has ever been brought back.</p>
+       <p>Director: Chidambaram</p>
+       <p>Writer: Chidambaram</p>
+       <p>Stars: Soubin Shahir, Sreenath Bhasi, Balu Varghese, Ganapathi, Jean Paul Lal, Deepak Parambol, Abhiram Radhakrishnan</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZvQLS0ZtEF26rUleQ8IMnBJAmUq3SUm4hpV'">Watch</button>
+       </div>
+       </div>
+       
+       
+       <div class="popup" id="popup141">
+       <span class="close" onclick="closePopup('popup141')">&times;</span>
+       <h1>Siren [2024]</h1>
+       <p>Also Known As: Siren</p>
+       <p>Rating ⭐️: 6.4 / 10 (6.4 based on 2354 user ratings)</p>
+       <p>Release Info: 16 / 2 / 2024 (India)</p>
+       <p>Genre: #Action #Crime #Thriller</p>
+       <p>Language: #Tamil, #Kannada, #Malayalam, #Hindi, #Telugu</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: An ambulance driver turned criminal eagerly awaits his release from prison, but it takes 14 years.</p>
+       <p>Director: Anthony Bhagyaraj</p>
+       <p>Writer: Anthony Bhagyaraj</p>
+       <p>Stars: Anupama Parameswaran, Yogi Babu, Keerthy Suresh, Jayam Ravi, Samarth Kaimliya, Samuthirakani, Aafiyah</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZpMmu0Z3UL1ixqYmRSMms7yReCbhyFMjil7'">Watch</button>
+       </div>
+       </div>
+       
+       <div class="popup" id="popup131">
+       <span class="close" onclick="closePopup('popup131')">&times;</span>
+       <h1>Anchakkallakokkan [2024]</h1>
+       <p>Also Known As: Anchakkallakokkan</p>
+       <p>Rating ⭐️: 6.9 / 10 (6.9 based on 395 user ratings)</p>
+       <p>Release Info: 15 / 3 / 2024 (India)</p>
+       <p>Genre: 🎭 #Drama #Thriller</p>
+       <p>Language: #Malayalam</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: In a small country town, a cowardly police constable must survive his first days of duty when a convicted felon in lockup tries to seek revenge.</p>
+       <p>Director: Ullas Chemban</p>
+       <p>Writers: Ullas Chemban, Vikil Venu</p>
+       <p>Stars: Lukman Avaran, Chemban Vinod Jose, Megha Thomas, Manikandan R. Achari, Sreejith Ravi, Merin Jose Pottackal, Merin Philip</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZLVah0ZxLbK1co3oumLagxbUUaqmyDl5ti7'">Watch</button>
+       
+       </div>
+       </div>
+      
+       
+       <div class="popup" id="popup133">
+       <span class="close" onclick="closePopup('popup133')">&times;</span>
+       <h1>Premalu [2024]</h1>
+       <p>Also Known As: Premalu</p>
+       <p>Rating ⭐️: 8 / 10 (8 based on 6734 user ratings)</p>
+       <p>Release Info: 9 / 2 / 2024 (India)</p>
+       <p>Genre: 🤣 #Comedy 🌹 #Romance</p>
+       <p>Language: #Malayalam, #Telugu</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: Sachin pursues romance but finds himself caught between two potential partners, leading to amusing complications.</p>
+       <p>Director: Girish A.D.</p>
+       <p>Writers: Girish A.D., Kiran Josey</p>
+       <p>Stars: Naslen Mamitha, Baiju Shyam, Mohan Sangeeth, Prathap Akhila, Bhargavan A.R., Raja Ganesh, Shameer Khan</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZ16jb0Z4OJ39T66ANkSRc6Ks1g6afxfHYbk'">Watch</button>
+       
+       </div>
+       </div>
+       
+       <div class="popup" id="popup134">
+       <span class="close" onclick="closePopup('popup134')">&times;</span>
+       <h1>Rahel Makan Kora [2023]</h1>
+       <p>Also Known As: Rahel Makan Kora</p>
+       <p>Rating ⭐️: 6 / 10 (6 based on 367 user ratings)</p>
+       <p>Release Info: 13 / 10 / 2023 (India)</p>
+       <p>Genre: 🎭 #Drama</p>
+       <p>Language: #Malayalam</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: Parallel depicts Gowthami as a single mother, Rahel and Kora's friendship, Kora's inner turmoil, interwoven lives, impacts of relationships, sacrifices, and ambitions, focusing on factual na</p>
+       <p>Director: Ubaini E.</p>
+       <p>Writer: Baby Edathua</p>
+       <p>Stars: Anson Paul, Merin Philip, Manu Pillai, Althaf Salim, Sminu Sijo, Vijayakumar</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZWobu0ZfaS31QVHAGjFezoNHk1c1hT1kAwX'">Watch</button>
+       
+       </div>
+       </div>
+       
+       <div class="popup" id="popup135">
+       <span class="close" onclick="closePopup('popup135')">&times;</span>
+       <h1>Thundu [2024]</h1>
+       <p>Also Known As: Thundu</p>
+       <p>Rating ⭐️: 5.1 / 10 (5.1 based on 613 user ratings)</p>
+       <p>Release Info: 16 / 2 / 2024 (India)</p>
+       <p>Genre: #Action 🤣 #Comedy</p>
+       <p>Language: #Malayalam</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: A constable aiming for a promotion unexpectedly encounters many problems. Facing the issues with humor and compassion, he works to overcome them.</p>
+       <p>Director: Riyas Shereef</p>
+       <p>Writer: Kannappan Riyas Shereef</p>
+       <p>Stars: Biju Menon, Shine Tom Chacko, Unnimaya Prasad, Nitin Thomas, Noushad Ali, Johny Antony, Anand Bbal</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZ6qMu0Z1DlEra778QB34bnYpBujPhHVlBb7'">Watch</button>
+       
+       </div>
+       </div>
+       
+       
+       
+       <div class="popup" id="popup136">
+       <span class="close" onclick="closePopup('popup136')">&times;</span>
+       <h1>Lover [2024]</h1>
+       <p>Also Known As: Lover</p>
+       <p>Rating ⭐️: 7 / 10 (7 based on 1602 user ratings)</p>
+       <p>Release Info: 9 / 2 / 2024 (India)</p>
+       <p>Genre: 🎭 #Drama</p>
+       <p>Language: #Tamil, #Hindi, #Kannada, #Telugu, #Malayalam</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: Arun and Divya's six-year relationship starts unraveling as they drift apart, raising the question of whether love can withstand such differences.</p>
+       <p>Directors: Prabhu Ram Vyas</p>
+       <p>Writers: Prabhu Ram Vyas</p>
+       <p>Stars: Harini Sundararajan, Sri Gouri Priya, Manikandan K, Kanna Ravi, Pintu Pandu, Arunachaleshwaran, Nikhila Sankar</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZkAMu0Z9KbrchVAPOVb146bQeXdNLAXQSDy'">Watch</button>
+       
+       </div>
+       </div>
+       
+       <div class="popup" id="popup137">
+       <span class="close" onclick="closePopup('popup137')">&times;</span>
+       <h1>Aattam [2023]</h1>
+       <p>Also Known As: Aattam</p>
+       <p>Rating ⭐️: 8.3 / 10 (8.3 based on 2302 user ratings)</p>
+       <p>Release Info: 5 / 1 / 2024 (India)</p>
+       <p>Genre: 🎭 #Drama</p>
+       <p>Language: #Malayalam</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: After a party amongst a theatre group, their sole actress, Anjali is subjected to a crime from one of the men in the group. A meeting is called for. In trying to reach a consensus, stories unfold...</p>
+       <p>Directors: Anand Ekarshi</p>
+       <p>Writers: Anand Ekarshi</p>
+       <p>Stars: Vinay Forrt, Zarin Shihab, Kalabhavan Shajohn, Madan Babu, Sudheer Babu, Nandini Gopalakrishnan, Prasanth Madhavan</p>
+       
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZdGMu0ZJ5H6sTDGih43X3MBVVCz54p1Dely'">Watch</button>
+       
+       </div>
+       </div>
+     
+       
+       <div class="popup" id="popup140">
+       <span class="close" onclick="closePopup('popup140')">&times;</span>
+       <h1>Bramayugam [2024]</h1>
+       <p>Also Known As: Bramayugam</p>
+       <p>Rating ⭐️: 8 / 10 (7829 user ratings)</p>
+       <p>Release Info: 15 / 2 / 2024 (India)</p>
+       <p>Genre: #Horror #Thriller</p>
+       <p>Language: #Malayalam</p>
+       <p>Country of Origin: 🇮🇳 #India</p>
+       <p>Story Line: Thevan, a folk singer of the Paanan caste, has a fateful encounter when escaping slavery, leading to him discovering an ancient traditional mansion altering his destiny.</p>
+       <p>Directors: Rahul Sadasivan</p>
+       <p>Writers: Rahul Sadasivan T.D. Ramakrishnan</p>
+       <p>Stars: Mammootty, Arjun Ashokan, Sidharth Bharathan, Amalda Liz, Manikandan R. Achari, Aluva Sheeba Sebastian, Akash Chandran</p>
+       <div class="button-container">
+       <button class="button watch-button" onclick="window.location.href='https://u.pcloud.link/publink/show?code=XZecbu0ZlDlrxUssRNVG5fRiN2WEYukHObqX'">Watch</button>
+       
+       </div>
+       </div>
+       
+      
+
+
+  
+     
+     
+
+    <!-- JavaScript -->
+    <script>
+     function openPopup(popupId) {
+     const popup = document.getElementById(popupId);
+     if (popup) {
+     popup.style.display = 'block'; // Display the popup
+     }
+     }
+     
+     function closePopup(popupId) {
+     const popup = document.getElementById(popupId);
+     if (popup) {
+     popup.style.display = 'none'; // Hide the popup
+     }
+     }
+    </script>
+    
+</body>
+</html>
