@@ -284,6 +284,7 @@ nav a {
 
 
   <div class="container">
+  <div class="popup-overlay" id="overlay" onclick="closePopup()"></div>
     <h2><i>Upcoming films</i></h2>
        <div class="card"  onclick="openPopup('popup1')">
        <img src="Nadikar.png" alt="Movie 1">
@@ -379,7 +380,7 @@ nav a {
     </div>
     
     <div class="card" onclick="openPopup('popup136')">
-    <img src="lover.jpg" alt="Lover">
+    <img src="Lover.jpg" alt="Lover">
     <div class="card-content">
     <div class="card-title"></div>
     </div>
@@ -696,6 +697,11 @@ nav a {
        </div>
        </div>
        
+       
+       <audio id="background-music">
+       <!-- Placeholder for audio playback -->
+       </audio>
+       
       
 
 
@@ -718,6 +724,89 @@ nav a {
      popup.style.display = 'none'; // Hide the popup
      }
      }
+     
+     
+     const backgroundMusic = document.getElementById('background-music');
+     
+     function openPopup(popupId) {
+     const popup = document.getElementById(popupId);
+     popup.style.display = 'block';
+     document.getElementById('overlay').style.display = 'block';
+     
+     // Play background music based on popup
+     if (popupId === 'popup140') {
+     playMusic('bramayugam.mp3');
+     } 
+     else if (popupId === 'popup137') {
+     playMusic('aattam.mp3');
+     }
+     else if (popupId === 'popup136') {
+     playMusic('lover.mp3');
+     }
+     else if (popupId === 'popup135') {
+     playMusic('thundu.mp3');
+     }
+     else if (popupId === 'popup133') {
+     playMusic('Premalu.mp3');
+     }
+     else if (popupId === 'popup131') {
+     playMusic('anchakkallakokkan.mp3');
+     }
+     else if (popupId === 'popup142') {
+     playMusic('manjummel boys.mp3');
+     }
+     else if (popupId === 'popup143') {
+     playMusic(' Laapataa Ladies.mp3');
+     }
+     else if (popupId === 'popup144') {
+     playMusic('jai ganesh.mp3');
+     }
+     else if (popupId === 'popup145') {
+     playMusic('varshangalku shesham.mp3');
+     }
+     else if (popupId === 'popup146') {
+     playMusic('star.mp3');
+     }
+     else if (popupId === 'popup1') {
+     playMusic('nadikar.mp3');
+     }
+     else if (popupId === 'popup2') {
+     playMusic('aadujeevitham.mp3');
+     }
+     
+     }
+     
+     function closePopup() {
+     const popups = document.querySelectorAll('.popup');
+     popups.forEach(popup => {
+     popup.style.display = 'none';
+     });
+     document.getElementById('overlay').style.display = 'none';
+     
+     // Stop background music when closing popup
+     stopMusic();
+     }
+     
+     function playMusic(musicSrc) {
+     backgroundMusic.src = musicSrc;
+     backgroundMusic.volume = 0.1; // Set volume to low
+     backgroundMusic.play();
+     }
+     
+     function stopMusic() {
+     backgroundMusic.pause();
+     backgroundMusic.currentTime = 0;
+     }
+     
+     function toggleMute(movieId) {
+     const audio = document.getElementById('background-music');
+     if (audio.paused) {
+     audio.play();
+     } else {
+     audio.pause();
+     }
+     }
+     
     </script>
     
 </body>
