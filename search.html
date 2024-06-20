@@ -118,6 +118,14 @@
         #trendingWordsSection.hidden {
             display: none;
         }
+
+        /* Error message styles */
+        .error-message {
+            color: red;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -154,8 +162,11 @@
     <div class="suggestions" id="suggestionList">
         <!-- Suggestions will appear here -->
     </div>
+    
+    <div class="error-message" id="errorMessage">
+        <!-- Error message will appear here -->
+    </div>
 </div>
-
 
 <!-- Your JavaScript code -->
 <script>
@@ -167,7 +178,9 @@
 
     function showSuggestions(keyword) {
         const suggestionList = document.getElementById('suggestionList');
+        const errorMessage = document.getElementById('errorMessage');
         suggestionList.innerHTML = ''; // Clear previous suggestions
+        errorMessage.innerHTML = ''; // Clear previous error message
 
         // Hide trending words section if user starts searching
         const trendingWordsSection = document.getElementById('trendingWordsSection');
@@ -183,24 +196,48 @@
             { term: 'lover', url: 'lover.html' },
             { term: 'bramayugam', url: 'bramayugam.html' },
             { term: 'Anchakkallakokkan', url: 'Anchakkallakokkan.html' },
-            { term: 'keyword5', url: 'https://example.com/link5' }
+            { term: 'Premalu', url: 'Premalu.html' },
+            { term: 'Manjummel Boys', url: 'Manjummel Boys.html' },
+            { term: 'Aavesham', url: 'Aavesham.html' },
+            { term: 'Star', url: 'Star.html' },
+            { term: 'Jai Ganesh', url: 'Jai ganesh.html' },
+            { term: '', url: '' },
+            { term: '', url: '' },
+            { term: '', url: '' },
+            { term: '', url: '' },
+            { term: '', url: '' },
+            { term: '', url: '' },
+            { term: '', url: '' },
+            { term: '', url: '' },
+            
         ];
 
         // Filter keywords based on input
         const filteredKeywords = keywords.filter(k => k.term.toLowerCase().includes(keyword.toLowerCase()));
 
         // Generate HTML for suggestions
-        filteredKeywords.forEach(k => {
-            const suggestion = document.createElement('a'); // Create an anchor tag
-            suggestion.classList.add('suggestion');
-            suggestion.textContent = k.term;
-            suggestion.href = k.url; // Link to the specified URL
-            suggestionList.appendChild(suggestion);
-        });
-    }
-</script>
-
-
-    
-    </body>
-    </html>
+        if (filteredKeywords.length > 0) {
+            filteredKeywords.forEach(k => {
+                const suggestion = document.createElement('a'); // Create an anchor tag
+                suggestion.classList.add('suggestion');
+                suggestion.textContent = k.term;
+                suggestion.href = k.url; // Link to the specified URL
+                suggestionList.appendChild(suggestion);
+                });
+                } else {
+                // Show error message and link to Google search
+                const errorText = document.createElement('p');
+                errorText.textContent = "Your result is not found. Check your spelling.";
+                errorMessage.appendChild(errorText);
+                
+                const googleSearchLink = document.createElement('a');
+                googleSearchLink.href = `https://www.google.com/search?q=${encodeURIComponent(keyword)}+movie`;
+                googleSearchLink.textContent = `Search for "${keyword}" on Google`;
+                googleSearchLink.target = "_blank";
+                errorMessage.appendChild(googleSearchLink);
+                }
+                }
+                </script>
+                
+                </body>
+</html>
