@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Episodes Streaming</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #171717;
+            color: #DFDEDC;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #171717;
+            color: #DFDEDC;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            width: 200%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .episode {
+            background-color: #DFDEDC;
+            color: #171717;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
+            margin: 10px 0;
+            padding: 15px;
+            width: 90%;
+            max-width: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1s ease-out forwards;
+            cursor: pointer;
+        }
+
+        .episode img {
+            width: 30%;
+            border-radius: 15px;
+            transition: transform 0.5s;
+        }
+
+        .episode .episode-content {
+            width: 70%;
+            margin-left: 10px;
+        }
+
+        .episode h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+            transition: color 0.3s, transform 0.5s;
+        }
+
+        .episode p {
+            color: #333;
+            font-size: 0.9em;
+            transition: color 0.3s, transform 0.5s;
+        }
+
+        .episode:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(255, 255, 255, 0.4);
+        }
+
+        .episode:hover img {
+            transform: scale(1.1);
+        }
+
+        .episode:hover h2, .episode:hover p {
+            color: #171717;
+            transform: translateY(-10px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+   <script>
+   document.addEventListener('DOMContentLoaded', () => {
+   document.querySelectorAll('.episode').forEach(episode => {
+   episode.addEventListener('click', () => {
+   const streamLink = episode.getAttribute('data-stream-link');
+   window.location.href = streamLink;
+   });
+   });
+   });
+   </script>
+</head>
+<body>
+    <header>
+        <img src="Nagendran's Honeymoons .png" alt="Series Logo">
+    </header>
+    <main>
+        <div class="episode" data-stream-link="https://www.dropbox.com/scl/fi/7v7ht3daipz9893v4j2at/MS-Nagendrans-Honeymoons-S01E01-Jaanaki-720p-1.mkv?rlkey=wl00uhth65yhzpbx9fezofxcy&dl=0 ">
+        <img src="janaki.jpg" alt="Episode 1">
+        <div class="episode-content">
+        <h2>Episode 1: Jaanaki</h2>
+        <p>When an opportunity to go to the Gulf arises, Nagendran finds himself short of funds. Soman proposes an unconventional solution: marriage.</p>
+        </div>
+        </div>
+        <div class="episode"  data-stream-link="https://www.dropbox.com/scl/fi/i9ei1dg7i9xxz8vtuaze5/MS-Nagendrans-Honeymoons-S01E02-Lillikutty-720p.mkv?rlkey=c16sp8bqn22wll16nhsmgx6i2&dl=0 ">
+        <img src="lillikutti.jpg" alt="Episode 2">
+        <div class="episode-content">
+        <h2>Episode 2: Lillikutty</h2>
+        <p>Nagendran and Soman arrive in Pathanamthitta to see Lillykutty. While Lillykutty weaves her influence over Nagendran, can he secure Varkey's elusive approval?</p>
+        </div>
+        </div>
+        <div class="episode"  data-stream-link="https://www.dropbox.com/scl/fi/k366cmgue5exrcxjjje5s/MS-Nagendrans-Honeymoons-S01E03-Laila-720p.mkv?rlkey=bho2olymxn3pp5joq6mbkovt4&dl=0 ">
+        <img src="laila.jpg" alt="Episode 3">
+        <div class="episode-content">
+        <h2>Episode 3: Laila</h2>
+        <p>Nagendran and Soman encounter Laila in Kasaragod. Her mysterious past ensnares Nagendran with fear. Can he break free from her grasp?</p>
+        </div>
+        </div>
+        <div class="episode"  data-stream-link="" >
+        <img src="savithri.jpg" alt="Episode 4">
+        <div class="episode-content">
+        <h2>Episode 4: Saavithri</h2>
+        <p>Nagendran and Soman reach Palakkad to acquire the necessary funds and meet Saavithri. Can Nagendran save her, or will he get trapped in the palls of a dilapidated Brahmin household?</p>
+        </div>
+        </div>
+        <div class="episode" data-stream-link="">
+        <img src="thankam.jpg" alt="Episode 5">
+        <div class="episode-content">
+        <h2>Episode 5: Thangam</h2>
+        <p>Why are the locals rushing to marry off Thangam? Nagendran meets Thangam in Kuttanad and struggles to outwit the locals. He and Soman try to escape from Varkey's grasp.</p>
+        </div>
+        </div>
+        <div class="episode" data-stream-link="">
+        <img src="last.jpg" alt="Episode 6">
+        <div class="episode-content">
+        <h2>Episode 6: Mozhi</h2>
+        <p>Bewitched by Mozhi at first sight, Nagendran is not able to deceive her. Tensions rise as he and Soman clash for the first time. Can Nagendran forge a new life with Mozhi?</p>
+        </div>
+        </div>
+        
+        <!-- Add more episodes as needed -->
+    </main>
+</body>
+</html>
